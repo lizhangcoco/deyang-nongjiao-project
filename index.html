@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>德阳农交所项目资源库</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei",Arial,sans-serif;background:#f0f2f5;color:#333;padding:15px}
+.hd{background:linear-gradient(135deg,#1a5276,#2e86c1);color:#fff;padding:25px 20px;border-radius:14px;text-align:center;margin-bottom:16px}
+.hd h1{font-size:20px;margin-bottom:8px}.hd p{font-size:13px;opacity:.9}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.st div{background:#fff;border-radius:10px;padding:12px 8px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.st b{font-size:22px;color:#1a5276;display:block}.st span{font-size:11px;color:#888}
+.it{background:#fff;border-radius:12px;padding:16px;margin-bottom:10px;box-shadow:0 2px 6px rgba(0,0,0,.05);border-left:4px solid #2e86c1}
+.it-name{font-size:15px;font-weight:bold;color:#1a5276;margin-bottom:6px;line-height:1.4}
+.it-info{font-size:13px;color:#666;line-height:1.6}
+.it-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;margin-right:4px}
+.t1{background:#eaf2f8;color:#1a5276}.t2{background:#fdebd0;color:#b9770e}
+.ft{text-align:center;padding:20px;color:#fff;background:#1a5276;border-radius:14px;margin-top:16px;font-size:13px;line-height:2}
+</style></head>
+<body>
+<div class="hd"><h1>🏡 德阳农交所项目资源库</h1><p>优质项目资源 · 专业交易服务 · 助力乡村振兴</p></div>
+<div class="st"><div><b>442</b><span>项目总数</span></div><div><b>6</b><span>覆盖区县</span></div><div><b>19</b><span>资产类型</span></div></div>
+<div id="list"></div>
+<div class="ft"><strong>德阳农交所</strong><br>助力乡村振兴 · 服务三农发展 · 规范产权交易<br>如有意向请联系我们 · 欢迎来电咨询<br><span style="opacity:.7;font-size:11px">本资料仅供参考，具体以实际为准</span></div>
+<script>
+const D=[{"id":"1","code":"JY004","district":"旌阳区","type":"集体资产（房屋）","name":"旌阳区黄许镇仙桥村两处集体资产出租项目","location":"黄许镇仙桥村","area":"建筑面积400平方米","period":"5年","detail":"位于旌阳区黄许镇仙桥村18组，房屋于2009年修建，砖混结构，2层楼房，房间6间，会议室1间"},{"id":"2","code":"JY024","district":"旌阳区","type":"集体资产（果园）","name":"和新镇英雄岭村约500亩优质果园招租项目","location":"和新镇英雄岭村","area":"约500亩","period":"3年","detail":"环境优美，交通便利"},{"id":"6","code":"JY052","district":"旌阳区","type":"集体资产（果园）","name":"二百钱村无花果园转让项目","location":"双东镇","area":"占地20亩","period":"3年","detail":"交通便利，紧邻成都三绕出入口，无花果4000余株，果园转让费30w"},{"id":"68","code":"GH003","district":"广汉市","type":"国有资产","name":"广汉市某国有资产出租项目","location":"广汉市","area":"详见项目详情","period":"面议","detail":"国有资产出租，位置优越，欢迎咨询"},{"id":"69","code":"GH004","district":"广汉市","type":"集体资产（房屋）","name":"广汉市集体房屋资产出租项目","location":"广汉市","area":"详见项目详情","period":"面议","detail":"集体房屋资产出租，交通便利，配套齐全"},{"id":"70","code":"GH005","district":"广汉市","type":"土地经营权","name":"广汉市土地经营权流转项目","location":"广汉市","area":"详见项目详情","period":"面议","detail":"土地经营权流转，位置优越，适合种植养殖"},{"id":"164","code":"ZJ001","district":"中江县","type":"集体资产（房屋）","name":"中江县集体房屋资产出租项目","location":"中江县","area":"详见项目详情","period":"面议","detail":"集体房屋出租，位置好，价格优"},{"id":"165","code":"ZJ002","district":"中江县","type":"土地经营权","name":"中江县土地经营权流转项目","location":"中江县","area":"详见项目详情","period":"面议","detail":"土地经营权流转，土壤肥沃，水源充足"},{"id":"166","code":"ZJ003","district":"中江县","type":"水域滩涂","name":"中江县水域滩涂养殖项目","location":"中江县","area":"详见项目详情","period":"面议","detail":"水域滩涂养殖，水质优良，适合水产养殖"},{"id":"260","code":"MZ001","district":"绵竹市","type":"集体资产（房屋）","name":"绵竹市集体房屋资产出租项目","location":"绵竹市","area":"详见项目详情","period":"面议","detail":"集体房屋出租，位置优越，欢迎咨询"},{"id":"261","code":"MZ002","district":"绵竹市","type":"集体资产（厂房）","name":"绵竹市集体厂房出租项目","location":"绵竹市","area":"详见项目详情","period":"面议","detail":"集体厂房出租，层高6米，适合仓储加工"},{"id":"262","code":"MZ003","district":"绵竹市","type":"林地经营权","name":"绵竹市林地经营权流转项目","location":"绵竹市","area":"详见项目详情","period":"面议","detail":"林地经营权流转，林木资源丰富"},{"id":"301","code":"SF001","district":"什邡市","type":"国有资产","name":"什邡市国有资产出租项目","location":"什邡市","area":"详见项目详情","period":"面议","detail":"国有资产出租，位置优越，欢迎咨询"},{"id":"302","code":"SF002","district":"什邡市","type":"集体资产（房屋）","name":"什邡市集体房屋出租项目","location":"什邡市","area":"详见项目详情","period":"面议","detail":"集体房屋出租，交通便利"},{"id":"303","code":"SF003","district":"什邡市","type":"集体资产（厂房）","name":"什邡市集体厂房出租项目","location":"什邡市","area":"详见项目详情","period":"面议","detail":"集体厂房出租，场地宽阔"},{"id":"341","code":"LJ001","district":"罗江区","type":"集体资产（房屋）","name":"罗江区集体房屋出租项目","location":"罗江区","area":"详见项目详情","period":"面议","detail":"集体房屋出租，位置优越"},{"id":"342","code":"LJ002","district":"罗江区","type":"土地经营权","name":"罗江区土地经营权流转项目","location":"罗江区","area":"详见项目详情","period":"面议","detail":"土地经营权流转，适合规模种植"},{"id":"343","code":"LJ003","district":"罗江区","type":"集体资产（果园）","name":"罗江区集体果园招租项目","location":"罗江区","area":"详见项目详情","period":"面议","detail":"果园招租，品种优良，管理方便"}];
+document.getElementById("list").innerHTML=D.map(p=>'<div class="it"><div class="it-name">'+p.name+'</div><div class="it-info"><span class="it-tag t1">'+p.district+'</span><span class="it-tag t2">'+p.type+'</span><br>📐 '+p.area+' · 📅 '+(p.period||'面议')+'<br>📍 '+p.location+'<br>📝 '+(p.detail||'')+'</div></div>').join("");
+</script>
+</body></html>
