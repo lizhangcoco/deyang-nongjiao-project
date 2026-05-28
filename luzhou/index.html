@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+<title>泸州市农村资源要素机会清单 2026年第5期</title>
+<meta content="172个项目覆盖7个区县，闲置资产与土地经营权一站式查询，支持搜索筛选" name="description"/>
+<meta content="泸州市农村资源要素机会清单 2026年第5期" property="og:title"/>
+<meta content="172个项目覆盖7个区县，闲置资产与土地经营权一站式查询，支持搜索筛选" property="og:description"/>
+<meta content="https://skyagent-artifacts.tiangong.cn/router/agent/2026-05-28/prod_agent_59253af2-f427-4351-aa20-ea4dada237dc/og_share_image_901ef193cfed4a91a020f4a0ae96b609.png" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#1a7a4c;--pl:#2ea06a;--pd:#0f5a36;--ac:#f0a030;--acl:#ffc060;--bg:#f4f7f4;--card:#fff;--tx:#2c3e2c;--txl:#6b7c6b;--sh:0 2px 12px rgba(26,122,76,.1);--r:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ===== Hero ===== */
+.hero{background:linear-gradient(135deg,var(--pd) 0%,var(--p) 40%,var(--pl) 100%);color:#fff;padding:48px 20px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 70%,rgba(255,255,255,.08) 0%,transparent 50%),radial-gradient(circle at 70% 30%,rgba(240,160,48,.12) 0%,transparent 50%);animation:hFloat 20s ease-in-out infinite}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(244,247,244,.15))}
+@keyframes hFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(-2%,2%)}}
+.hero-c{position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 16px;font-size:12px;margin-bottom:14px;letter-spacing:1px;animation:fadeInDown .6s ease}
+.hero h1{font-size:24px;font-weight:800;margin-bottom:6px;text-shadow:0 2px 8px rgba(0,0,0,.2);animation:fadeInDown .6s .1s ease both}
+.hero h2{font-size:14px;font-weight:400;opacity:.9;margin-bottom:24px;animation:fadeInDown .6s .2s ease both}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+.stats-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;animation:fadeInDown .6s .3s ease both}
+.stat-card{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:10px 18px;min-width:85px;transition:transform .3s}
+.stat-card:hover{transform:translateY(-2px)}
+.stat-num{font-size:26px;font-weight:800;color:var(--acl)}
+.stat-label{font-size:11px;opacity:.85}
+
+/* ===== Tabs ===== */
+.tab-bar{display:flex;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:100}
+.tab-item{flex:1;text-align:center;padding:12px 0;font-size:14px;font-weight:600;color:var(--txl);cursor:pointer;position:relative;transition:color .3s}
+.tab-item.active{color:var(--p)}
+.tab-item.active::after{content:'';position:absolute;bottom:0;left:20%;right:20%;height:3px;background:var(--p);border-radius:3px 3px 0 0}
+.tab-item:active{background:rgba(0,0,0,.02)}
+
+/* ===== Filter ===== */
+.filter-bar{background:rgba(255,255,255,.97);backdrop-filter:blur(12px);padding:10px 14px;box-shadow:0 1px 4px rgba(0,0,0,.04);position:sticky;top:45px;z-index:99}
+.search-box{display:flex;align-items:center;background:var(--bg);border-radius:24px;padding:8px 14px;margin-bottom:8px;border:2px solid transparent;transition:border-color .3s}
+.search-box:focus-within{border-color:var(--p)}
+.search-box svg{width:18px;height:18px;fill:var(--txl);margin-right:8px;flex-shrink:0}
+.search-box input{border:none;outline:none;background:transparent;flex:1;font-size:14px;color:var(--tx)}
+.search-box input::placeholder{color:#aaa}
+.filter-row{display:flex;gap:5px;overflow-x:auto;padding-bottom:3px;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-bottom:4px}
+.filter-row::-webkit-scrollbar{display:none}
+.ftag{white-space:nowrap;padding:4px 12px;border-radius:14px;font-size:11px;border:1.5px solid #e0e0e0;background:#fff;color:var(--txl);cursor:pointer;transition:all .25s;flex-shrink:0}
+.ftag.active{background:var(--p);color:#fff;border-color:var(--p);box-shadow:0 2px 8px rgba(26,122,76,.25)}
+.ftag:active{transform:scale(.95)}
+.result-info{font-size:11px;color:var(--txl);padding:2px 0}
+
+/* ===== Charts ===== */
+.chart-section{background:#fff;margin:8px 12px;border-radius:var(--r);padding:16px;box-shadow:var(--sh)}
+.chart-title{font-size:14px;font-weight:700;color:var(--pd);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.chart-title .dot{width:8px;height:8px;border-radius:50%;background:var(--p)}
+.bar-chart{display:flex;flex-direction:column;gap:8px}
+.bar-row{display:flex;align-items:center;gap:8px}
+.bar-label{font-size:11px;color:var(--txl);min-width:52px;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:22px;background:#f0f4f0;border-radius:11px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:11px;transition:width 1s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:10px;color:#fff;font-weight:600;min-width:24px}
+.bar-val{font-size:11px;color:var(--tx);min-width:28px;text-align:left;font-weight:600}
+.donut-wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
+.donut-svg{width:140px;height:140px}
+.donut-legend{display:flex;flex-direction:column;gap:4px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:11px}
+.legend-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+
+/* ===== Cards ===== */
+.section-hd{display:flex;align-items:center;gap:8px;padding:14px 14px 6px;font-size:15px;font-weight:700;color:var(--pd)}
+.section-hd .ico{width:24px;height:24px;background:var(--p);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800}
+.section-hd .cnt{font-size:12px;color:var(--txl);font-weight:400;margin-left:auto}
+.card-list{padding:0 12px 8px}
+.card{background:var(--card);border-radius:var(--r);padding:14px 16px;margin-bottom:8px;box-shadow:var(--sh);cursor:pointer;transition:all .3s;border-left:4px solid var(--p);position:relative;overflow:hidden;animation:cardIn .4s ease both}
+.card.land{border-left-color:var(--ac)}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.card:active{transform:scale(.985)}
+.card-hd{display:flex;align-items:flex-start;gap:8px}
+.card-num{background:var(--p);color:#fff;font-size:10px;font-weight:700;padding:2px 7px;border-radius:8px;flex-shrink:0;margin-top:2px}
+.card.land .card-num{background:var(--ac)}
+.card-title{font-size:14px;font-weight:600;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card.expanded .card-title{-webkit-line-clamp:unset}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 4px}
+.ctag{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:500}
+.ct-d{background:#e8f5e9;color:var(--pd)}
+.ct-u{background:#fff3e0;color:#e65100}
+.ct-s{background:#e3f2fd;color:#1565c0}
+.ct-p{background:#fce4ec;color:#c62828}
+.ct-m{background:#f3e5f5;color:#7b1fa2}
+.card-desc{font-size:12px;color:var(--txl);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.6}
+.card.expanded .card-desc{-webkit-line-clamp:unset}
+.card-price{font-size:16px;font-weight:800;color:#c62828;margin-top:6px}
+.card-detail{display:none;padding-top:10px;border-top:1px dashed #e8e8e8;margin-top:8px}
+.card.expanded .card-detail{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.d-row{display:flex;align-items:flex-start;margin-bottom:6px;font-size:12px}
+.d-lbl{color:var(--txl);min-width:68px;flex-shrink:0}
+.d-val{color:var(--tx);font-weight:500}
+.ctc-btn{display:inline-flex;align-items:center;gap:4px;background:var(--p);color:#fff;border:none;border-radius:20px;padding:7px 18px;font-size:12px;margin-top:8px;cursor:pointer;transition:all .3s;font-weight:500}
+.ctc-btn:active{background:var(--pd);transform:scale(.95)}
+.ctc-btn.copied{background:#4caf50}
+
+/* ===== Empty ===== */
+.empty{text-align:center;padding:48px 20px;color:var(--txl)}
+.empty svg{width:56px;height:56px;fill:#ddd;margin-bottom:10px}
+.empty p{font-size:14px}
+
+/* ===== Back Top ===== */
+.btt{position:fixed;bottom:24px;right:16px;width:42px;height:42px;background:var(--p);color:#fff;border:none;border-radius:50%;box-shadow:0 4px 14px rgba(26,122,76,.4);cursor:pointer;display:none;align-items:center;justify-content:center;font-size:18px;z-index:99;transition:all .3s}
+.btt.show{display:flex}
+.btt:active{transform:scale(.9)}
+
+/* ===== Share ===== */
+.share-f{position:fixed;bottom:24px;left:16px;z-index:99}
+.share-b{display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--ac),#e89520);color:#fff;border:none;border-radius:24px;padding:10px 20px;font-size:13px;font-weight:700;box-shadow:0 4px 16px rgba(240,160,48,.45);cursor:pointer;transition:all .3s;animation:pulse2 2s ease-in-out infinite}
+@keyframes pulse2{0%,100%{box-shadow:0 4px 16px rgba(240,160,48,.45)}50%{box-shadow:0 4px 24px rgba(240,160,48,.7)}}
+.share-b:active{transform:scale(.95)}
+.share-b svg{width:16px;height:16px;fill:#fff}
+
+/* ===== Modal ===== */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;justify-content:center;align-items:flex-end}
+.modal-bg.show{display:flex}
+.modal{background:#fff;border-radius:16px 16px 0 0;width:100%;max-width:500px;padding:24px 20px 40px;animation:slideUp .3s ease}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal h3{font-size:16px;margin-bottom:16px;text-align:center}
+.share-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.share-item{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer}
+.share-item .si-ico{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;transition:transform .2s}
+.share-item .si-ico:active{transform:scale(.9)}
+.share-item span{font-size:11px;color:var(--txl)}
+.modal-x{display:block;margin:16px auto 0;padding:8px 32px;border:1px solid #ddd;border-radius:20px;background:#fff;font-size:13px;color:var(--txl);cursor:pointer}
+
+/* ===== Poster Modal ===== */
+.poster-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:300;justify-content:center;align-items:center;flex-direction:column;padding:20px;gap:12px}
+.poster-modal.show{display:flex}
+.poster-img-wrap{max-width:360px;width:100%;border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.poster-img-wrap img{width:100%;display:block;border-radius:16px}
+.poster-tip{color:#fff;font-size:13px;text-align:center;opacity:.9;line-height:1.6}
+.poster-actions{display:flex;gap:12px;margin-top:4px}
+.poster-actions button{padding:10px 24px;border-radius:24px;border:none;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}
+.poster-actions button:active{transform:scale(.95)}
+.btn-save{background:linear-gradient(135deg,var(--ac),#e89520);color:#fff}
+.btn-close-poster{background:rgba(255,255,255,.2);color:#fff}
+
+/* ===== Footer ===== */
+.footer{text-align:center;padding:24px 20px;font-size:11px;color:var(--txl);background:#e8ede8}
+.footer .f1{font-weight:600;color:var(--pd);margin-bottom:4px}
+
+/* ===== Scroll animations ===== */
+.fade-up{opacity:0;transform:translateY(20px);transition:all .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body style="padding-bottom: 50px;">
+<!-- Hero -->
+<div class="hero">
+<div class="hero-c">
+<div class="hero-badge">📋 2026年第5期</div>
+<h1>泸州市农村资源要素机会清单</h1>
+<h2>盘活农村闲置资源 · 助力乡村振兴发展</h2>
+<div class="stats-row">
+<div class="stat-card"><div class="stat-num" id="sTotal">172</div><div class="stat-label">项目总数</div></div>
+<div class="stat-card"><div class="stat-num">7</div><div class="stat-label">覆盖区县</div></div>
+<div class="stat-card"><div class="stat-num">2</div><div class="stat-label">资源类别</div></div>
+<div class="stat-card"><div class="stat-num">8</div><div class="stat-label">用途类型</div></div>
+</div>
+</div>
+</div>
+<!-- Tabs -->
+<div class="tab-bar">
+<div class="tab-item active" data-tab="list" onclick="switchTab('list')">📋 项目列表</div>
+<div class="tab-item" data-tab="chart" onclick="switchTab('chart')">📊 数据概览</div>
+</div>
+<!-- List Tab -->
+<div id="tabList">
+<div class="filter-bar">
+<div class="search-box">
+<svg viewbox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+<input id="sInput" placeholder="搜索项目名称、地址、用途、价格..." type="text"/>
+</div>
+<div class="filter-row" id="fCat">
+<div class="ftag active" data-v="all">全部</div>
+<div class="ftag" data-v="闲置资产">🏠 闲置资产</div>
+<div class="ftag" data-v="土地经营权">🌾 土地经营权</div>
+</div>
+<div class="filter-row" id="fDist">
+<div class="ftag active" data-v="all">全部区县</div>
+<div class="ftag" data-v="江阳区">江阳区</div>
+<div class="ftag" data-v="龙马潭区">龙马潭区</div>
+<div class="ftag" data-v="纳溪区">纳溪区</div>
+<div class="ftag" data-v="泸县">泸县</div>
+<div class="ftag" data-v="合江县">合江县</div>
+<div class="ftag" data-v="叙永县">叙永县</div>
+<div class="ftag" data-v="古蔺县">古蔺县</div>
+</div>
+<div class="filter-row" id="fUsage">
+<div class="ftag active" data-v="all">全部用途</div>
+<div class="ftag" data-v="养殖">🐄 养殖</div>
+<div class="ftag" data-v="种植">🌿 种植</div>
+<div class="ftag" data-v="商业">🏪 商业</div>
+<div class="ftag" data-v="办公">🏢 办公</div>
+<div class="ftag" data-v="加工仓储">🏭 加工仓储</div>
+<div class="ftag" data-v="文旅休闲">🏞️ 文旅休闲</div>
+<div class="ftag" data-v="教育">🏫 教育</div>
+</div>
+<div class="result-info" id="resInfo">共 172 个项目</div>
+</div>
+<div id="cardBox"></div>
+<div class="empty" id="emptyBox" style="display:none">
+<svg viewbox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+<p>未找到匹配项目，请调整筛选条件</p>
+</div>
+</div>
+<!-- Chart Tab -->
+<div id="tabChart" style="display:none">
+<div class="chart-section fade-up">
+<div class="chart-title"><div class="dot"></div>区县项目分布</div>
+<div class="bar-chart" id="chartDistrict"></div>
+</div>
+<div class="chart-section fade-up">
+<div class="chart-title"><div class="dot"></div>资源类别占比</div>
+<div class="donut-wrap" id="chartCategory"></div>
+</div>
+<div class="chart-section fade-up">
+<div class="chart-title"><div class="dot"></div>用途类型分布</div>
+<div class="bar-chart" id="chartUsage"></div>
+</div>
+<div class="chart-section fade-up">
+<div class="chart-title"><div class="dot"></div>价格区间分布</div>
+<div class="bar-chart" id="chartPrice"></div>
+</div>
+<div class="chart-section fade-up">
+<div class="chart-title"><div class="dot"></div>各区县资源类别对比</div>
+<div id="chartStacked" style="overflow-x:auto"></div>
+</div>
+</div>
+<!-- Back Top -->
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<!-- Share Float -->
+<div class="share-f">
+<button class="share-b" onclick="openShare()">
+<svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"></path></svg>
+分享给朋友
+</button>
+</div>
+<!-- Share Modal -->
+<div class="modal-bg" id="shareModal" onclick="closeShare(event)">
+<div class="modal">
+<h3>📤 分享到微信</h3>
+<p style="font-size:13px;color:var(--txl);margin:8px 0 16px;line-height:1.6">复制链接后，打开微信粘贴发送即可。朋友点开直接查看完整清单。</p>
+<div class="share-grid">
+<div class="share-item" onclick="copyLink()">
+<div class="si-ico" style="background:#07c160;color:#fff">💬</div>
+<span>微信好友</span>
+</div>
+<div class="share-item" onclick="copyLink()">
+<div class="si-ico" style="background:#07c160;color:#fff">🌳</div>
+<span>朋友圈</span>
+</div>
+<div class="share-item" onclick="copyLink()">
+<div class="si-ico" style="background:#e8f5e9;color:var(--p)">🔗</div>
+<span>复制链接</span>
+</div>
+<div class="share-item" onclick="genPoster()">
+<div class="si-ico" style="background:#e3f2fd;color:#1565c0">📷</div>
+<span>生成海报</span>
+</div>
+</div>
+<button class="modal-x" onclick="closeShare(event)">取消</button>
+</div>
+</div>
+<!-- Poster Modal -->
+<div class="poster-modal" id="posterModal">
+<div class="poster-img-wrap" id="posterImgWrap"></div>
+<div class="poster-tip">📱 长按图片保存到相册，即可分享到微信/朋友圈</div>
+<div class="poster-actions">
+<button class="btn-save" onclick="downloadPoster()">💾 保存图片</button>
+<button class="btn-close-poster" onclick="closePoster()">关闭</button>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer">
+<div class="f1">泸州市农村资源要素机会清单 · 2026年第5期</div>
+<div>数据来源：泸州市农业农村局 | 价格以实际挂牌为准</div>
+</div>
+<script>
+const D=[{"i":1,"c":"闲置资产","t":"古蔺县石宝镇4000头规模化育肥羊养殖场出租","a":"古蔺县石宝镇","d":"古蔺县","v":"养殖场于 2025 年建成，总投资 500 余万元；交通便利，通水电，属合马村、玉龙村两个村集体资产；现有羊圈圈舍 9 栋，圈舍占地面积 4000 ㎡，设计存栏 4000 头育肥羊；羊场总占地面积 10008㎡，紧邻 50 余亩放牧林场；养殖场配备草料加工等设施设备，租赁业主可实现带羊进场即可养殖。","s":"4000 ㎡","p":"2万元/年（以挂牌价为准）","u":"羊养殖","ut":"养殖","m":"出租（租期 3 年）","ct":"罗老师（18008249898）"},{"i":2,"c":"闲置资产","t":"叙永县马岭镇石龙村水产孵化中心出租","a":"泸州市叙永县马岭镇石龙村","d":"叙永县","v":"全围墙包围，有1栋钢结构大棚，1栋改建教学楼，内设房间11间，距离马岭场镇仅需5分钟，距离G76厦蓉高速江门出口约21分钟，交通便利。","s":"1000㎡","p":"面议","u":"水产育苗","ut":"养殖","m":"出租","ct":"郭老师（13881773933）"},{"i":3,"c":"闲置资产","t":"古蔺县永乐街道水落村4000头规模化生猪养殖场出租","a":"古蔺县永乐街道水落村 7 组","d":"古蔺县","v":"养殖场于 2020 年 4 月建成，交通便利，通水电，现有猪圈 6 个单元，面积 6000 ㎡，设计存栏 4000 头育肥猪，猪场总占地面积 7000 ㎡，养殖场内设施设备齐全；全新场地，未曾养殖。","s":"6000 ㎡","p":"约25万元/年（以挂牌价为准）","u":"育肥猪养殖","ut":"养殖","m":"出租（租期5—10年）","ct":"罗老师（18008249898）"},{"i":4,"c":"闲置资产","t":"叙永县观兴镇长坝村养老院出租","a":"泸州市叙永县观兴镇长坝村","d":"叙永县","v":"全围墙包围，空间独立，有房屋4栋，场地宽阔，设有单独厨卫设施，有现成可使用设备；紧邻叙镇路，靠近场镇，交通便利，环境优美。","s":"1500㎡","p":"面议","u":"商业（办公、住宿、餐饮、加工厂等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":5,"c":"闲置资产","t":"江阳区分水岭镇连坡村葡萄基地出租","a":"江阳区分水岭镇连坡村","d":"江阳区","v":"距离董允坝高速约 3.8 公里，葡萄基地包含农家乐、鱼塘、种植大棚，土地平整，交通便利。","s":"231 亩","p":"约 800 元/亩/年（以挂牌价为准）","u":"种植养殖、农家乐","ut":"养殖","m":"出租（租期 4 年）","ct":"余老师(0830-6556086)"},{"i":6,"c":"闲置资产","t":"泸县兆雅镇凤鸣村原栖流办公室出租","a":"泸县兆雅镇凤鸣村六组","d":"泸县","v":"交通便利，紧邻万得路，建筑状况良好。","s":"100 ㎡","p":"商议","u":"办公、餐饮","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":7,"c":"闲置资产","t":"叙永县白腊苗族乡天堂村青储饲料加工厂出租","a":"泸州市叙永县白腊苗族乡天堂村","d":"叙永县","v":"设备齐全，功能分区，设有生活区、办公室，水、电等基础配套设施完善；紧邻010县道，距离乡政府21公里，交通便利，环境优美。","s":"1200㎡","p":"面议","u":"物料加工","ut":"办公","m":"出租","ct":"郭老师（13881773933）"},{"i":8,"c":"闲置资产","t":"古蔺县石宝镇双丰村肉牛养殖场出租","a":"石宝镇双丰村 16 组（小地名：大山坡）","d":"古蔺县","v":"养殖场于 2019 年建成，交通便利，通水电，由双丰村集体建设，现有牛圈 1 个，设计存栏 1000 头育肥牛，牛场总占地面积6000 ㎡，养殖场内设施设备齐全。","s":"","p":"约 10 万元/年（以挂牌价为准）","u":"肉牛养殖","ut":"养殖","m":"出租（租期3年）","ct":"罗老师（18008249898）"},{"i":9,"c":"闲置资产","t":"古蔺县马蹄镇纳盘村大型养殖场出租","a":"古蔺县马蹄镇纳盘村四组","d":"古蔺县","v":"养殖场于 2018 年 7 月建成，交通便利，通水电，现有养殖场 2 栋，面积约 2000 ㎡，1 栋约 100 ㎡办公用房，设计存栏养牛约300 头，养猪约 3000 头，养殖场总占地面积 40000 ㎡。","s":"2000 ㎡","p":"约 3 万元/年（以挂牌价为准）","u":"畜牧养殖","ut":"养殖","m":"出租（租期5年）","ct":"罗老师（18008249898）"},{"i":10,"c":"闲置资产","t":"泸县云锦镇翻身村大米加工房出租","a":"泸县云锦镇翻身村 4 社","d":"泸县","v":"距离老云百路 50 米，有乡道接入；院坝面积 800 ㎡，有闲置教学楼 2 层共 12 间，闲置办公楼 2 层共 6 间，附属设备有打米机、色选机、真空机、封口机、烘干机若干。","s":"建筑面积 1200 ㎡","p":"约 35000 元/年（以挂牌价为准）","u":"大米加工及储存","ut":"办公","m":"出租（租期5年）","ct":"郑老师（13088315191）"},{"i":11,"c":"闲置资产","t":"合江县荔江镇花桂村曾家坪原党群服务中心出租","a":"合江县荔江镇花桂村 10 社","d":"合江县","v":"建筑面积约 1500 ㎡，共 2 层，地理位置较好，位于三江荔枝产业园核心区，交通便利，采光良好，通风设备齐全，水电齐全。","s":"建筑面积 1500 ㎡","p":"约 25000 元-3 万元/年（以挂牌价为准）","u":"办公、生产加工、居家养老、仓储冷链","ut":"种植","m":"出租（租期5年）","ct":"侯老师"},{"i":12,"c":"闲置资产","t":"泸县福集镇万宝村惠民服务中心出租","a":"泸县福集镇万宝村五组","d":"泸县","v":"该建筑为砖混结构，包含院坝，一共400㎡。","s":"400㎡","p":"2 万元/年","u":"办公、餐饮","ut":"办公","m":"出租（租期2年）","ct":"郑老师（13088315191）"},{"i":13,"c":"闲置资产","t":"江阳区分水岭镇董允坝村晏石坝办公楼出租","a":"江阳区分水岭镇董允坝村八组晏石坝聚居点","d":"江阳区","v":"位于分水岭镇董允坝村晏石坝聚居点内，环境优美；可随时交付；附近设有公交站，距离董允坝村高速收费站3公里，车程5分钟，交通便利。","s":"420㎡","p":"0.88万元/年","u":"商业（办公、住宿、餐饮等）","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":14,"c":"闲置资产","t":"江阳区邻玉街道漕溪村原兴隆小学及民房出租","a":"泸州市江阳区漕溪村","d":"江阳区","v":"环境优美，交通便利。","s":"学校445m²、民房1:100m²、民房2:300m²","p":"第一年租金1.5万元，提成第一年营收纯利润；第二年租金","u":"","ut":"其他","m":"","ct":""},{"i":6,"c":"闲置资产","t":"1万元（以挂牌价为准）","a":"","d":"其他","v":"","s":"","p":"","u":"办公/库房/加工厂等","ut":"办公","m":"出租","ct":"余老师(0830-6556086)"},{"i":15,"c":"闲置资产","t":"江阳区黄舣镇马道子村烘干冷链设施1套出租","a":"江阳区黄舣镇马道子村 1 组","d":"江阳区","v":"设备齐全，交通方便，面积广阔；院坝 2100 ㎡（含钢架房1000 ㎡、进房路 80 ㎡），380v 动力电线路（含 4 个配电箱，2 个电缆分支箱），冷链库 1 个，冷藏库 2 个，烘干机 1 套；硬化院坝 195 立方，硬化加宽 128 米道路 34 立方及附属设施。","s":"2100 ㎡","p":"约 12 万元/年（以挂牌价为准）","u":"冷冻鲜货、烘干水果","ut":"种植","m":"出租（租期 5 年）","ct":"余老师(0830-6556086)"},{"i":16,"c":"闲置资产","t":"泸县太伏镇永利村农产品产地冷藏保鲜设施出租","a":"泸县太伏镇永利村 2 组","d":"泸县","v":"五间冷藏库房，压缩冷凝机 5 组，交通便利，设施齐全。","s":"1100 ㎡","p":"5 万元/年（以挂牌价为准）","u":"生产设施、冷藏设备","ut":"加工仓储","m":"出租（租期 3 年）","ct":"郑老师（13088315191）"},{"i":17,"c":"闲置资产","t":"叙永县马岭镇龙盘村集中育秧育苗中心出租","a":"泸州市叙永县马岭镇龙盘村","d":"叙永县","v":"现有1栋钢结构大棚，内设温湿度监测器，配套选苗用苗链条齿轮机1个，距离马岭场镇12分钟、G76厦蓉高速江门出口28分钟，交通便利。","s":"1000㎡","p":"面议","u":"秧苗培育","ut":"种植","m":"出租","ct":"郭老师（13881773933）"},{"i":18,"c":"闲置资产","t":"古蔺县箭竹苗族乡聚贤村生猪养殖场","a":"箭竹苗族乡聚贤村五组（蛤蟆石）","d":"古蔺县","v":"养殖场预计于 2026 年 6 月交付，交通便利，通水电，由聚贤村村集体建设，现有猪圈 2 个单元，独立生活区 150 ㎡；设计存栏1800 头育肥猪，猪场总占地面积 10000 ㎡，养殖场内设施设备齐全，是全新现代化养殖场。","s":"","p":"约 200000 元/年（以挂牌价为准）","u":"生猪养殖","ut":"养殖","m":"出租（租期 3 年）","ct":"罗老师（18008249898）"},{"i":19,"c":"闲置资产","t":"叙永县枧槽苗族乡长秧村长秧小学出租","a":"泸州市叙永县枧槽苗族乡观长秧村","d":"叙永县","v":"距离叙威高速营山互通出口3分钟车程；已通水电气网 。","s":"3000㎡","p":"面议","u":"办公、营业","ut":"办公","m":"出租","ct":"郭老师（13881773933）"},{"i":20,"c":"闲置资产","t":"古蔺县观文镇荒田村生猪养殖场流转","a":"观文镇荒田村三组","d":"古蔺县","v":"猪场占地面积约 10000 ㎡，私人养殖场，设计存栏 2000 头，交通便利，租金便宜。","s":"","p":"约 20000 元/年（以挂牌价为准）","u":"生猪养殖","ut":"养殖","m":"出租（租期 5 年）","ct":"侯老师（13548341167）"},{"i":21,"c":"闲置资产","t":"古蔺县彰德街道芭蕉村肉羊养殖场流转","a":"彰德街道芭蕉村二组","d":"古蔺县","v":"养殖场于 2022 年建成，交通便利，通水电，由芭蕉村村集体建设，现有羊圈 3 个栋，仓库料棚 200 ㎡，独立生活区 120 ㎡；设计存栏 600 头育肥羊，羊场总占地面积 8000 ㎡，养殖场内设施设备齐全。","s":"","p":"约 20000 元/年（以挂牌价为准）","u":"肉羊养殖","ut":"养殖","m":"出租（租期3年）","ct":"罗老师（18008249898）"},{"i":22,"c":"闲置资产","t":"叙永县黄坭镇原树坪道班出租","a":"泸州市叙永县黄坭镇树坪村","d":"叙永县","v":"该资产空间相对独立，有住宿楼2栋2层，房间14间，附近有轿子山、微竹博物馆、西南高山小径竹种质资源基地等景点；紧邻S438省道，距离叙威高速分水出口20分钟车程，交通便利，环境优美。","s":"1000㎡","p":"面议","u":"商业（办公、住宿、餐饮等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":23,"c":"闲置资产","t":"泸县福集镇鱼目村村校出租","a":"泸县福集镇鱼目村3社","d":"泸县","v":"原村小学，现已闲置，紧邻村道，适合发展乡村手工业或农家乐。","s":"占地约2.1亩","p":"商议","u":"办公、学校、农家乐","ut":"养殖","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":24,"c":"闲置资产","t":"古蔺县白泥镇顺河村肉羊养殖场流转","a":"白泥镇顺河村四组（南凹田集聚点）","d":"古蔺县","v":"基地养殖基础扎实，交通便利，通水电，建有圈舍 34 间，有完善的管理用房、消毒池、仓库料棚，机械设施完善，属浙川扶贫养猪场改建项目；设计存栏 500 只，养殖场内设施设备齐全。","s":"总占地约 1000m²","p":"面议","u":"肉羊养殖","ut":"养殖","m":"出租（租期 3 年）","ct":"罗老师（18008249898）"},{"i":25,"c":"闲置资产","t":"泸县兆雅镇安贤社区党群服务中心负一层出租","a":"泸县兆雅镇安贤社区","d":"泸县","v":"现浇结构，可用作办公场地或者厂房；临近S307泸永路，交通便利。","s":"850㎡","p":"商议","u":"办公、餐饮","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":26,"c":"闲置资产","t":"叙永县枧槽苗族乡原中学旧址出租","a":"泸州市叙永县枧槽苗族乡枧槽社区","d":"叙永县","v":"环境优美；可随时交付；距离叙威高速枧槽互通出口10分钟车程，交通便利。","s":"5000㎡","p":"面议","u":"商业（办公、住宿、餐饮等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":27,"c":"闲置资产","t":"叙永县白腊苗族乡天堂村场上养殖场出租","a":"泸州市叙永县白腊苗族乡天堂村","d":"叙永县","v":"设备齐全，有单独办公用房，功能分区，水、电等基础配套设施完善，养殖规模1000头；紧邻010县道，距离乡政府25公里，交通便利，环境优美。","s":"2600㎡","p":"面议","u":"家禽养殖","ut":"养殖","m":"出租","ct":"郭老师（13881773933）"},{"i":28,"c":"闲置资产","t":"叙永县白腊苗族乡天堂村田湾头养殖场出租","a":"泸州市叙永县白腊苗族乡天堂村","d":"叙永县","v":"设施设备齐全，功能分区，水、电等基础配套设施完善，养猪规模600头；紧邻010县道，距离乡政府25公里，交通便利。","s":"1400㎡","p":"面议","u":"家禽养殖","ut":"养殖","m":"出租","ct":"郭老师（13881773933）"},{"i":29,"c":"闲置资产","t":"叙永县马岭镇三块石村三块小学出租","a":"泸州市叙永县马岭镇三块石村","d":"叙永县","v":"距离321国道450米、G76厦蓉高速黄桷坪出口10分钟，交通便利。","s":"1000㎡","p":"面议","u":"商业（办公、住宿、餐饮、加工厂等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":30,"c":"闲置资产","t":"叙永县马岭镇三块石村四方小学出租","a":"泸州市叙永县马岭镇三块石村","d":"叙永县","v":"距离321国道900米、G76厦蓉高速黄桷坪出口15分钟，交通便利。","s":"740㎡","p":"面议","u":"商业（办公、住宿、餐饮、加工厂等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":31,"c":"闲置资产","t":"叙永县马岭镇龙盘村养猪场出租","a":"泸州市叙永县马岭镇龙盘村","d":"叙永县","v":"距离叙古路6.5公里、G76厦蓉高速黄桷坪出口33分钟，交通便利。","s":"1300㎡","p":"面议","u":"家禽养殖","ut":"养殖","m":"出租","ct":"郭老师（13881773933）"},{"i":32,"c":"闲置资产","t":"叙永县马岭镇高店村高店小学出租","a":"泸州市叙永县马岭镇高店村","d":"叙永县","v":"现有1栋4层高教学楼，1栋3层高教学楼，1栋办公楼，1栋宿舍，院坝2处，距离马岭场镇9分钟、G76厦蓉高速江门出口9分钟，交通便利，环境优美。","s":"2100㎡","p":"面议","u":"商业（办公、住宿、餐饮、加工厂等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":33,"c":"闲置资产","t":"叙永县观兴镇河坝村农产品交易中心出租","a":"泸州市叙永县观兴镇河坝村","d":"叙永县","v":"设备齐全，紧邻叙镇路，靠近场镇，交通便利，环境优美。","s":"300㎡","p":"面议","u":"农产品交易","ut":"其他","m":"出租","ct":"郭老师（13881773933）"},{"i":34,"c":"闲置资产","t":"泸县兆雅镇凤鸣村原半坡办公室出租","a":"泸县兆雅镇凤鸣村九组","d":"泸县","v":"交通便利，距万得路约 1.1 公里，位于花木园区，紧邻罗家花园，环境优美。","s":"240 ㎡","p":"商议","u":"办公、餐饮、居住","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":35,"c":"闲置资产","t":"叙永县马岭镇凤凰村秸秆处理中心出租","a":"泸州市叙永县马岭镇凤凰村","d":"叙永县","v":"有1栋新建2层砖混结构厂房，院坝1个，距离马岭场镇12分钟、G76厦蓉高速江门出口24分钟，交通便利、环境优美。","s":"1500㎡","p":"面议","u":"秸秆焚烧","ut":"其他","m":"出租","ct":"郭老师（13881773933）"},{"i":36,"c":"闲置资产","t":"江阳区分水岭青峰村鹿野仙踪用房","a":"泸州市江阳区分水岭镇青峰村八组","d":"江阳区","v":"环境优美，交通便利，可发展文旅、休闲度假。","s":"1296.21㎡","p":"3万元/年（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":37,"c":"闲置资产","t":"泸县兆雅镇永和村原象岭办公室二楼出租","a":"泸县兆雅镇永和村 11 组","d":"泸县","v":"距离S307泸永路主干道约1.8公里。","s":"100㎡","p":"商议","u":"办公、居住","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":38,"c":"闲置资产","t":"泸县兆雅镇石龙村原苗儿村校出租","a":"泸县兆雅镇石龙村8组","d":"泸县","v":"交通便利，位于苗儿中心村旁，4.5米村道直通；建有两层约1500㎡教学楼，约2亩操场。","s":"占地约4.85亩","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":39,"c":"闲置资产","t":"泸县兆雅镇大石坪村原黄坝村校出租","a":"泸县兆雅镇大石坪村15组","d":"泸县","v":"交通便利，位于282乡道大石坪至永寿段道路旁。","s":"占地约1.87亩，有3层约1500㎡教学楼，约600㎡操场","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":40,"c":"闲置资产","t":"泸县兆雅镇大石坪村原高岩村校出租","a":"泸县兆雅镇大石坪村11组","d":"泸县","v":"交通便利，4.5米村道直通。","s":"占地约1.8亩，教学楼建筑面积约600㎡，操场约400㎡","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":41,"c":"闲置资产","t":"泸州龙马潭区沱江市场摊位出租","a":"龙马潭区小市街道下合道街","d":"龙马潭区","v":"龙马潭区小市街道下合道街摊位、仓库出租，共20个摊位、10个仓库，周边人流密集，交通便利。","s":"约1000㎡","p":"2万元/年","u":"商业","ut":"商业","m":"出租","ct":"郑老师（13088315191）"},{"i":42,"c":"闲置资产","t":"泸县兆雅镇凤鸣村原大安村校出租","a":"泸县兆雅镇凤鸣村5组","d":"泸县","v":"交通便利，距离万得路约200米，建有3层教学楼约400㎡，约500㎡操场。","s":"占地约1.89亩","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":43,"c":"闲置资产","t":"泸县兆雅镇两河村原郑家村校出租","a":"泸县兆雅镇两河村8组","d":"泸县","v":"交通便利，距离G8515广泸高速云龙收费站约6.3公里。","s":"占地约2亩，建有2层教学楼","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":44,"c":"闲置资产","t":"泸县兆雅镇古佛村原万山村校出租","a":"泸县兆雅镇古佛村8组","d":"泸县","v":"交通便利，距万得路约1.5公里。","s":"占地约1.39亩，建有3层教学楼","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":45,"c":"闲置资产","t":"泸县兆雅镇永和村原青龙村校出租","a":"泸县兆雅镇永和村7组","d":"泸县","v":"交通便利，位于进港路旁，距万得路主干道约3公里。","s":"占地约2.96亩，建有3层教学楼","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":46,"c":"闲置资产","t":"泸县兆雅镇型家村原玉皇村校出租","a":"泸县兆雅镇型家村10组","d":"泸县","v":"交通便利，临近5.5米宽村公路，距S307泸永路主干道约3公里。","s":"占地约1.38亩","p":"商议","u":"办公、学校","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":47,"c":"闲置资产","t":"叙永县枧槽苗族乡观音桥村小学出租","a":"泸州市叙永县枧槽苗族乡观音桥村","d":"叙永县","v":"距离叙威高速枧槽互通出口30分钟车程。","s":"2000㎡","p":"面议","u":"办公、营业","ut":"办公","m":"出租","ct":"郭老师（13881773933）"},{"i":48,"c":"闲置资产","t":"泸县兆雅镇杨九社区两套商住房出租","a":"泸县兆雅镇杨九社区","d":"泸县","v":"位于二级场镇，生活交通便利，距离G8515广泸高速云龙收费站2.2公里。","s":"120㎡","p":"商议","u":"办公、餐饮","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":49,"c":"闲置资产","t":"泸县兆雅镇古佛村原村办公室二楼商住房出租","a":"泸县兆雅镇古佛村5组","d":"泸县","v":"生活、交通便利，紧邻万得路；建筑状况良好，通水电气。","s":"170㎡","p":"商议","u":"居住、办公","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":50,"c":"闲置资产","t":"叙永县观兴镇普兴村果蔬分拣中心出租","a":"泸州市叙永县观兴镇普兴村","d":"叙永县","v":"全围墙包围，空间独立，有办公楼1栋，附近有千年古银杏树王、三仙洞等多处旅游景点； 距离叙镇路2公里，交通便利，环境优美。","s":"1200㎡","p":"面议","u":"商业（办公、住宿、餐饮、加工厂等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":51,"c":"闲置资产","t":"叙永县观兴镇骑龙村菌类种植基地出租","a":"泸州市叙永县观兴镇骑龙村","d":"叙永县","v":"全围墙包围，空间独立，建有养菌房、生产厂房，地面硬化，距离叙镇路800米，交通便利。","s":"1500㎡","p":"面议","u":"菌类培植","ut":"种植","m":"出租","ct":"郭老师（13881773933）"},{"i":52,"c":"闲置资产","t":"叙永县鸿鸽建材有限公司场地出租","a":"泸州市叙永县黄坭镇树坪村","d":"叙永县","v":"该资产全围墙包围，空间相对独立，有办公楼1栋2层，有单独厨卫设施，附近有轿子山、微竹博物馆、西南高山小径竹种质资源基地等景点；紧邻S438省道，距离叙威高速分水出口10分钟车程，交通便利，环境优美。","s":"3000㎡","p":"面议","u":"商业（办公、餐饮等）","ut":"商业","m":"出租","ct":"郭老师（13881773933）"},{"i":53,"c":"闲置资产","t":"龙马潭区罗汉街道石樑社区工业园区一、二厂区厂房","a":"龙马潭区罗汉街道石樑社区石梁北路133号","d":"龙马潭区","v":"交通便利，出租包含厂房及办公楼（多个厂房，请现勘）。","s":"701㎡、650㎡","p":"6万元/年（以挂牌价为准）","u":"办公、库房、加工厂、机械厂等","ut":"办公","m":"出租","ct":"余老师(0830-6556086)"},{"i":54,"c":"闲置资产","t":"古蔺县茅溪镇庙林村花椒仓储出租","a":"古蔺县茅溪镇庙林村八组","d":"古蔺县","v":"仓储中心投入资金 120 万元，于 2022 年 4 月完成验收交付；地理位置优越，位于庙林八组村道旁边，4.5 米沥青路直通厂房，交通便利，古仁高速通车后，距离高速路出口约 3 公里，通水电，占地广袤，可用于相关食品加工。","s":"960 ㎡","p":"4万元/年（以挂牌价为准）","u":"食品加工","ut":"种植","m":"出租（租期 5 年）","ct":"罗老师（18008249898）"},{"i":55,"c":"闲置资产","t":"古蔺县皇华镇规模化育肥猪养殖场出租","a":"皇华镇共裕村四组（小地名：界上）","d":"古蔺县","v":"养殖场于 2018 年建成，交通便利，通水电，由共裕村村集体建设，现有猪圈 1 个单元，设计存栏 700 头育肥猪，猪场总占地面积 2869 ㎡，养殖场内设施设备齐全。","s":"","p":"约45000元/年（以挂牌价为准）","u":"生猪养殖","ut":"养殖","m":"出租（租期 3 年）","ct":"罗老师（18008249898）"},{"i":56,"c":"闲置资产","t":"江阳区黄舣镇罗湾村冻库出租","a":"江阳区黄舣镇罗湾村 4 组","d":"江阳区","v":"2000 ㎡，其中冻库 200 ㎡，另配套选果、打包、制冰设备，厨房、厕所、简易办公用房等基础设施，水电气三通。","s":"2000 ㎡","p":"约 5 万元/年（以挂牌价为准）","u":"选果、打包、制冰、冷冻鲜货","ut":"办公","m":"出租","ct":"余老师(0830-6556086)"},{"i":57,"c":"闲置资产","t":"泸州龙马潭区土产果品经营站回龙湾门市出租","a":"龙马潭区小市街道回龙湾22号","d":"龙马潭区","v":"龙马潭区小市街道回龙湾22号五间门市出租，周边人流密集交通便利。","s":"135㎡","p":"12150元/年（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":58,"c":"闲置资产","t":"江阳区黄舣镇永兴村办公楼出租","a":"江阳区黄舣镇永兴村三潭 15 社山顶上聚居点","d":"江阳区","v":"环境优美，面积广阔，地处泸州老窖技改二期博樽项目建设点。","s":"1052 ㎡","p":"约 5 万元/年（以挂牌价为准）","u":"办公、养老、居住","ut":"办公","m":"出租（租期 5 年）","ct":"余老师(0830-6556086)"},{"i":59,"c":"闲置资产","t":"龙马潭区双加镇枝子园村食用菌基地","a":"龙马潭区双加镇枝子园村3组8号","d":"龙马潭区","v":"枝子园村食用菌基地位于双加镇西部，距离镇政府约3公里，基地交通便利，紧邻乡村主干道。","s":"856㎡","p":"1.2万元/年（以挂牌价为准）","u":"食用菌生产经营","ut":"其他","m":"出租","ct":"余老师(0830-6556086)"},{"i":60,"c":"闲置资产","t":"古蔺县白泥镇关田村规模化生猪养殖场出租","a":"古蔺县白泥镇菜板村四组（关田养殖场）","d":"古蔺县","v":"基地养殖基础扎实、配套设施完善；交通便利，白泥镇位于古金高速周边，高速收费站到场镇只有一公里，厂区位于扶贫公路（6.5 米宽）旁边 4.5 米水泥道直达厂区；总占地约 3200 ㎡，建有圈舍2 栋、污水池 2 个（200 立方米），库房 1 间，生活用房 2 间；可养殖生猪 1000 头，可灵活改造适配牛、羊、鸡、兔等多品类养殖；储藏室等辅助设施，办公、住宿，水电专配保障，生产生活需求一站式满足；基地地处生态优良无污染区域，适配绿色生态养殖，兼具规模化拓展与多元化发展潜力，投资运营价值突出。","s":"3200 ㎡","p":"约5万元/年（以挂牌价为准）","u":"畜牧养殖","ut":"养殖","m":"出租（租期面议）","ct":"罗老师（18008249898）"},{"i":61,"c":"闲置资产","t":"泸县云龙镇战旗村原村广场接待室出租","a":"泸县云龙镇战旗村第二村民小组","d":"泸县","v":"一层楼已通电，位于马路边上交通便利","s":"300 ㎡","p":"6000 元/年（以挂牌价为准）","u":"办公、居住","ut":"办公","m":"出租（租期 4 年）","ct":"郑老师（13088315191）"},{"i":62,"c":"闲置资产","t":"古蔺县马蹄镇环路村规模化羊养殖场出租","a":"古蔺县马蹄镇环路村四组","d":"古蔺县","v":"核心功能为规模化养羊产业，总建筑面积约 1500 ㎡，配套建设标准化养羊棚 3 个，区位条件优越，交通便利，水电等基础设施配套完善。","s":"1500 ㎡","p":"约 1 万元/年（以挂牌价为准）","u":"畜牧养殖","ut":"养殖","m":"出租（租期面议）","ct":"罗老师（18008249898）"},{"i":63,"c":"闲置资产","t":"古蔺县马蹄镇土关村规模化羊养殖场出租","a":"古蔺县马蹄镇土关村五组","d":"古蔺县","v":"基地养殖基础扎实、配套全维完善，4.5 米水泥道直达场区，总占地约 2000 ㎡，建有圈舍 2 栋、隔离室 1 间，肉牛设计养殖规模 120200 头，可灵活改造适配猪、羊、鸡、兔等多品类养殖；场区配齐干湿分离机、粉碎机等专业生产设备以及磅秤、储藏室等辅助设施，办公、住宿、会议等功能用房齐全，水电专配保障、全域监控覆盖，生产生活需求一站式满足；基地地处生态优良无污染区域，适配绿色生态养殖，兼具规模化拓展与多元化发展潜力，投资运营价值突出。","s":"2000 ㎡","p":"约 1 万元/年（以挂牌价为准）","u":"畜牧养殖","ut":"养殖","m":"出租（租期面议）","ct":"罗老师（18008249898）"},{"i":64,"c":"闲置资产","t":"泸县云龙镇云丰村老办公室出租","a":"泸县云龙镇云丰和平街道南段61号","d":"泸县","v":"位于泸县云龙镇闲置的四间铺面，通水电，有厨房卫生间，交通便利。","s":"140㎡","p":"28800元/年（以挂牌价为准）","u":"超市、零售等","ut":"办公","m":"出租（租期5年）","ct":"郑老师（13088315191）"},{"i":65,"c":"闲置资产","t":"古蔺县茅溪镇中坪村红梁仓储中心出租","a":"古蔺县茅溪镇中坪村四组","d":"古蔺县","v":"仓储中心投入资金 270 万元，于 2025 年 3 月完成验收交付。地理位置优越，位于高粱种植基地中心地段，覆盖周边高粱、玉米水稻种植面积万余亩；交通便利，6.5 米沥青路直通厂房，古仁高速通车后距离高速路口约 3 公里；仓储中心配套设施齐全，配套有烘干设备、打包机、上货机、封装机、流水线等，可用于粮食粗加工。","s":"500 ㎡","p":"45000 元/年（以挂牌价为准）","u":"粮食粗加工","ut":"种植","m":"出租（租期5年）","ct":"罗老师（18008249898）"},{"i":66,"c":"闲置资产","t":"江阳区分水岭镇董允坝村伞里古街15号商铺一栋（现禾海膳食）","a":"江阳区分水岭镇董允坝村伞里古街15号","d":"江阳区","v":"伞里古街商铺（现禾海膳食）位于伞里商业街核心区域，客流量、人流量大，可随时交付；环境优美，紧邻油纸伞博物馆、伞里地标建筑分水阁、戏楼；距离董允坝高速路1公里，交通便利，车程约3分钟；已通水电气网；桌椅厨房设施齐全，可做餐饮食堂、办公一体。","s":"300㎡","p":"1.2万元/年（以挂牌价为准）","u":"商业（办公、住宿、餐饮等）","ut":"商业","m":"出租（租期2年）","ct":"余老师(0830-6556086)"},{"i":67,"c":"闲置资产","t":"合江县福宝镇鹿鸣村三社闲置办公楼出租","a":"合江县福宝镇鹿鸣村三社","d":"合江县","v":"建筑比较旧，。","s":"250 ㎡","p":"约 600 元/年（以挂牌价为准）","u":"办公、居住","ut":"办公","m":"出租（租期5年）","ct":"侯老师（13548341167）"},{"i":68,"c":"闲置资产","t":"泸县云龙镇大水河村2社石板厂出租","a":"泸县云龙镇大水河村 2 组","d":"泸县","v":"石厂，可进行石板加工，通电通水，交通便利。","s":"6566.67 ㎡","p":"2 万元/年（以挂牌价为准）","u":"加工厂","ut":"加工仓储","m":"出租（租期 5 年）","ct":"郑老师（13088315191）"},{"i":69,"c":"闲置资产","t":"合江县荔江镇河坝村温氏猪场（改建中）","a":"合江县荔江镇河坝村 1 社","d":"合江县","v":"养猪场项目可养殖 1000 头。","s":"3384.68 ㎡","p":"约 2.6 万元/年（以挂牌价为准）","u":"畜牧养殖","ut":"养殖","m":"出租（租期 3 年）","ct":"侯老师（13548341167）"},{"i":70,"c":"闲置资产","t":"纳溪区龙车镇原古楼村茶园办公室出租","a":"纳溪区龙车镇古楼村2组","d":"纳溪区","v":"位于古楼山的中心位置，县道旁边，车辆可直接到院坝内，离泸州、纳溪、赤水城区一小时车程内，离龙车镇、尧坝镇半小时车程，房屋安全简装，水电气网络已接线到门口，室内需承租方自行接入开通。","s":"500㎡","p":"4000元/年（以挂牌价为准）","u":"生产经营","ut":"种植","m":"出租（租期10年）","ct":"余老师(0830-6556086)"},{"i":71,"c":"闲置资产","t":"江阳区分水岭镇黎山村养猪场出租","a":"江阳区分水岭镇黎山村 1 组","d":"江阳区","v":"交通便利，环境安静，周围无住户，通水电。","s":"880 ㎡","p":"约 4 万元/年（以挂牌价为准）","u":"生猪养殖","ut":"养殖","m":"出租（租期 10 年）","ct":"余老师(0830-6556086)"},{"i":72,"c":"闲置资产","t":"合江县荔江镇坪上村560平老村委会办公室出租","a":"合江县坪上村 13 组","d":"合江县","v":"距县城 7 公里，距产城大道 5.5 公里，公路路面均为 5.5m宽，项目占地面积约 1160 ㎡（建筑楼层三层，面积约 560 ㎡），地理位置较好，交通便利，院坝宽阔，配备基本照明设备，水电齐全。","s":"约 1160 ㎡","p":"约 3 万元/年（以挂牌价为准）","u":"办公或储存","ut":"办公","m":"出租（租期5年）","ct":"侯老师（13548341167）"},{"i":73,"c":"闲置资产","t":"合江县荔江镇五亩村四组旧办公室房屋出租","a":"荔江镇五亩村四组","d":"合江县","v":"地势平坦、交通方便、靠近 S439 省道。","s":"120 ㎡","p":"约 7200 元/年（以挂牌价为准）","u":"办公用房","ut":"办公","m":"出租（租期5年）","ct":"侯老师（13548341167）"},{"i":74,"c":"闲置资产","t":"泸县云锦镇隆庆寨泸东渝西农旅康体融合产业园项目","a":"泸县云锦镇","d":"泸县","v":"初步规划 5000 亩，已经进行土地流转和初步建设成型的 交通：交通便利，紧邻 G246","s":"","p":"","u":"","ut":"其他","m":"投资合作","ct":"郑老师（13088315191）"},{"i":75,"c":"闲置资产","t":"泸县云锦镇板桥村小学","a":"云锦镇板桥村","d":"泸县","v":"闲置","s":"占地面积 1159.6 ㎡，建筑面积 724 ㎡","p":"","u":"","ut":"其他","m":"出租","ct":"郑老师（13088315191）"},{"i":76,"c":"闲置资产","t":"泸县云锦镇龙井村学校","a":"云锦镇龙井村","d":"泸县","v":"闲置","s":"占地面积 1056 ㎡，建筑面积 672 ㎡","p":"","u":"","ut":"教育","m":"出租","ct":"郑老师（13088315191）"},{"i":77,"c":"闲置资产","t":"合江县白沙镇忠孝村佛手基地冷藏库出租","a":"合江县白沙镇忠孝村佛手基地","d":"合江县","v":"已通电，交通便利，设备较新（详情请现勘）。","s":"100 ㎡","p":"2 万元/年（以挂牌价为准）","u":"生产设施、冷藏设备","ut":"种植","m":"出租（租期 4 年）","ct":"侯老师（13548341167）"},{"i":78,"c":"闲置资产","t":"合江县石龙镇大久村2社鱼塘堡养牛场出租","a":"合江县石龙镇大久村2社","d":"合江县","v":"2025 年建成，包括牛场和一间管理用房（详情请现勘）。","s":"520 ㎡","p":"2400 元/年（以挂牌价为准）","u":"养牛","ut":"养殖","m":"出租（租期 5 年）","ct":"侯老师（13548341167）"},{"i":79,"c":"闲置资产","t":"古蔺县大寨苗族乡向阳村种植大棚流转","a":"大寨苗族乡向阳村二组","d":"古蔺县","v":"大棚面积约 30 亩，交通便利，价格便宜。","s":"","p":"约 6000 元/年（以挂牌价为准）","u":"面议","ut":"种植","m":"出租（租期 5 年）","ct":""},{"i":80,"c":"闲置资产","t":"泸州市龙马潭区罗汉街道工业园区二厂区一、二厂房及办公楼","a":"泸州市龙马潭区罗汉街道石樑社区工业园区","d":"龙马潭区","v":"环境优美，交通便利，周边人群固定消费。","s":"1399.12㎡","p":"5万元/年","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":81,"c":"闲置资产","t":"泸县云锦镇卫和村学校","a":"云锦镇卫和村","d":"泸县","v":"闲置","s":"占地面积 747.5 ㎡，建筑面积 388.8 ㎡","p":"","u":"","ut":"教育","m":"出租","ct":"郑老师（13088315191）"},{"i":82,"c":"闲置资产","t":"泸县云锦镇天台寺村石灰村小学校","a":"云锦镇天台寺村","d":"泸县","v":"闲置","s":"占地面积 2261 ㎡，建筑面积 300 ㎡","p":"","u":"","ut":"教育","m":"出租","ct":"郑老师（13088315191）"},{"i":83,"c":"闲置资产","t":"泸县云锦镇黄泥堡幼儿园","a":"泸县云锦镇黄泥堡村","d":"泸县","v":"闲置","s":"占地面积 1057.93 ㎡ 建筑面积 160 ㎡。","p":"","u":"","ut":"教育","m":"出租","ct":"郑老师（13088315191）"},{"i":84,"c":"闲置资产","t":"泸县云锦镇长潮幼儿园","a":"云锦镇长潮村","d":"泸县","v":"闲置","s":"占地面积 1916.7 ㎡ 建筑面积 418 ㎡","p":"","u":"","ut":"教育","m":"出租","ct":"郑老师（13088315191）"},{"i":85,"c":"闲置资产","t":"泸县云锦镇冯石村学校","a":"云锦镇冯石村","d":"泸县","v":"闲置","s":"占地面积 192 ㎡，建筑面积 594 ㎡","p":"","u":"","ut":"教育","m":"出租","ct":"郑老师（13088315191）"},{"i":86,"c":"闲置资产","t":"泸县云锦镇旺龙山村学校","a":"云锦镇旺龙山村","d":"泸县","v":"闲置","s":"占地面积 259 ㎡，建筑面积 582 ㎡","p":"","u":"","ut":"教育","m":"出租","ct":"郑老师（13088315191）"},{"i":87,"c":"闲置资产","t":"合江县荔江镇慈竹林村8社养殖场出租","a":"合江县荔江镇慈竹林村 8 社","d":"合江县","v":"水电全通，交通便利，直达养殖场内，环保设施齐。","s":"占地 16 亩，建筑面积 3000 ㎡","p":"约 5 万元/年（以挂牌价为准）","u":"鸡、鸭、鹅、牛养殖","ut":"养殖","m":"出租（租期5年）","ct":"侯老师（13548341167）"},{"i":88,"c":"闲置资产","t":"古蔺县金兰街道红响村规模化生猪养殖场出租","a":"古蔺县金兰街道红响村 5 组","d":"古蔺县","v":"养殖场于 2018 年建成，交通便利，通水电，由红响村村集体建设，现有猪圈 2 个单元，设计存栏 1000 头育肥猪，猪场总占地面积 4289 ㎡，养殖场内设施设备齐全。","s":"","p":"约 95000 元/年","u":"生猪养殖","ut":"养殖","m":"出租（租期 3 年）","ct":"罗老师（18008249898）"},{"i":89,"c":"闲置资产","t":"合江县荔江镇花桂村堰坝三叉路原便民服务中心出租","a":"合江县荔江镇堰坝场","d":"合江县","v":"建筑面积约 300 ㎡，共 3 层，一楼为门市 50 ㎡左右，二楼有会议室办公室 120 ㎡，三楼有会议室及办公室 120 ㎡；地理位置较好，位于 439 省道与 S554 省道交叉路口，交通便利，大厅内部空间开阔，采光良好，配备基本照明设备，通风设备，水电齐全。","s":"建筑面积 300 ㎡","p":"约 12000 元/年（以挂牌价为准）","u":"办公、物流、仓储、生产加工","ut":"办公","m":"出租（租期5年）","ct":""},{"i":90,"c":"闲置资产","t":"合江县荔江镇蒋湾村原税湾办公室","a":"合江县荔江镇蒋湾村 8 社","d":"合江县","v":"交通便利，水源充足，地势平坦，环境优美。","s":"1.5 亩","p":"约 1 万元/年（以挂牌价为准）","u":"农家乐经营","ut":"办公","m":"出租（租期5年）","ct":"侯老师（13548341167）"},{"i":91,"c":"闲置资产","t":"泸县云龙镇英雄村党群服务中心楼顶出租","a":"泸县云龙镇英雄村党群服务中心","d":"泸县","v":"地势平坦、坡度适宜、排水良好、无遮挡。","s":"390 ㎡","p":"约 1250 元/年（以挂牌价为准）","u":"安装光伏发电","ut":"其他","m":"出租（20年）","ct":"郑老师（13088315191）"},{"i":92,"c":"闲置资产","t":"合江县荔江镇团湾村（原张坝村办公室）","a":"合江县荔江镇团湾村 16 社","d":"合江县","v":"交通便利。","s":"361 ㎡","p":"约 12000 元/年（以挂牌价为准）","u":"可用于农家乐","ut":"办公","m":"出租（租期5年）","ct":"侯老师（13548341167）"},{"i":93,"c":"闲置资产","t":"合江县荔江镇河坝村老村委会办公室出租","a":"荔江镇河坝村 5 社","d":"合江县","v":"坐落于场镇，交通便利，采光良好，配备基本照明设备，水电齐全。","s":"建筑面积 189 ㎡","p":"约 6000 元/年（以挂牌价为准）","u":"办公或住宿","ut":"办公","m":"出租（10年）","ct":"侯老师（13548341167）"},{"i":94,"c":"闲置资产","t":"合江县荔江镇小寨村原办公阵地出租","a":"合江县荔江镇小寨村九组","d":"合江县","v":"建筑面积约 240 ㎡，院坝 400 ㎡，是以前的小学校，学校撤销后改为村委会办公阵地，并村后成为闲置，地理位置较好，地势开阔平坦，院内幽静。","s":"建筑面积＋院坝共 640 ㎡","p":"约 1 万元/年（以挂牌价为准）","u":"办公或生产","ut":"办公","m":"出租（10年）","ct":"侯老师（13548341167）"},{"i":95,"c":"闲置资产","t":"合江县荔江镇两马村惠民服务中心出租","a":"合江县荔江镇两马村 10 社","d":"合江县","v":"建筑面积约 220 ㎡。","s":"建筑面积 220 ㎡","p":"约 3600 元/年（以挂牌价为准）","u":"办公","ut":"办公","m":"出租（10 年）","ct":"侯老师（13548341167）"},{"i":96,"c":"闲置资产","t":"泸县嘉明镇石燕村原老协会办公室及门市","a":"泸县嘉明镇石燕村五组","d":"泸县","v":"位于321国道旁交通方便，配置齐全，通水电。","s":"180㎡","p":"12000元/年（以挂牌价为准）","u":"居住、办公","ut":"办公","m":"出租（租期5年）","ct":"郑老师（13088315191）"},{"i":97,"c":"闲置资产","t":"泸县海潮镇徐场村村民委员会原办公室出租","a":"泸县海潮镇徐场村万全路","d":"泸县","v":"主要用于居住、办公，目前简装，房屋内已通水电，交通便利。","s":"92㎡","p":"2500元/年（以挂牌价为准）","u":"居住、办公","ut":"办公","m":"出租（租期5年）","ct":"郑老师（13088315191）"},{"i":98,"c":"闲置资产","t":"合江县荔江镇慈竹林村5社村委会办公室出租","a":"合江县荔江镇慈竹林村 5 社","d":"合江县","v":"水电全通，交通便利，直达村委会办公室楼，有停车坝，环保设施齐全。","s":"占地 300 ㎡，建筑面积 400 ㎡","p":"约 12000 元/年（以挂牌价为准）","u":"居住","ut":"办公","m":"出租（5年）","ct":"侯老师（13548341167）"},{"i":99,"c":"闲置资产","t":"合江县荔江镇两马村惠民服务中心出租","a":"合江县荔江镇两马村 1 社","d":"合江县","v":"建筑面积约 90 ㎡。","s":"建筑面积 90 ㎡","p":"约 800 元/年（以挂牌价为准）","u":"办公","ut":"办公","m":"出租（10年）","ct":"侯老师（13548341167）"},{"i":100,"c":"闲置资产","t":"合江县荔江镇两马村惠民服务中心出租","a":"合江县荔江镇两马村 6 社","d":"合江县","v":"建筑面积约 80 ㎡。","s":"建筑面积 80 ㎡","p":"约 1200 元/年（以挂牌价为准）","u":"办公","ut":"办公","m":"出租（10年）","ct":"侯老师（13548341167）"},{"i":101,"c":"闲置资产","t":"合江县荔江镇五亩村11组海涵村老办公室房屋出租","a":"荔江镇五亩村 11 组","d":"合江县","v":"地势平坦、交通方便、人居环境舒适。","s":"48 ㎡","p":"约 4800 元/年（以挂牌价为准）","u":"办公用房","ut":"办公","m":"出租（租期5年）","ct":"侯老师（13548341167）"},{"i":102,"c":"闲置资产","t":"古蔺县箭竹苗族乡乐园村规模化生猪养殖场出租","a":"古蔺县箭竹苗族乡乐园村五组","d":"古蔺县","v":"养殖场于 2021 年建成，交通便利，通水电，设计存栏 400 头育肥猪，养殖场内设施设备齐全。","s":"900 ㎡","p":"约2万元/年（以挂牌价为准）","u":"生猪养殖","ut":"养殖","m":"出租（租期不限）","ct":"罗老师（18008249898）"},{"i":103,"c":"闲置资产","t":"合江县荔江镇甘雨村原惠民服务中心出租","a":"合江县荔江镇甘雨村 12 社","d":"合江县","v":"建筑面积约 300 ㎡，地理位置较好，位于 308 省道路边，交通便利，大厅内部空间开阔，采光良好，配备基本照明设备、通风设备，水电齐全。","s":"建筑面积 300 ㎡","p":"约 1 万元/年（以挂牌价为准）","u":"办公或餐饮","ut":"办公","m":"出租（5年）","ct":"侯老师（13548341167）"},{"i":104,"c":"闲置资产","t":"合江县大桥镇黄包山村兴隆街门市","a":"合江县大桥镇黄包山村兴隆街门市（兴隆街 191 号楼盘 3.4 号门市）","d":"合江县","v":"交通便利，适合自营生意。","s":"建筑面积 102.53 ㎡","p":"约 2.4 万元/年（以挂牌价为准）","u":"办公或餐饮","ut":"办公","m":"出租","ct":"侯老师（13548341167）"},{"i":105,"c":"闲置资产","t":"合江县荔江镇甘雨村原惠民服务中心出租","a":"泸州市江阳区分水岭镇董允坝村二组振兴路330号","d":"江阳区","v":"原红卫村办公室位于分水岭镇场集市新农贸市场出入口，交通便利，人流量和客流量大，适合经营。","s":"40.2m²","p":"0.3万元/年","u":"商业（办公、养老等）","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":107,"c":"闲置资产","t":"江阳区分水岭镇董允坝村一组原红卫村办公室出租","a":"泸州市江阳区分水岭镇董允坝村一组振兴路279号","d":"江阳区","v":"交通便利，紧邻马路。","s":"110㎡","p":"0.4万元/年","u":"商业（办公、库房等）","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":108,"c":"闲置资产","t":"江阳区分水岭镇董允坝村一社石堰沟门市出租","a":"江阳区分水岭镇石堰沟振兴路279号董允坝村一组","d":"江阳区","v":"石堰沟门市位于分水岭镇场集市新农贸市场道路口处，交通便利，人流量和客流量大，可随时交付。","s":"856㎡","p":"0.48万元/年","u":"商业（办公、库房等）","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":109,"c":"闲置资产","t":"泸县兆雅镇燕岩村原新桥办公室出租","a":"泸县兆雅镇燕岩村 8 组","d":"泸县","v":"交通便利，距S307泸永路1.5公里。","s":"95㎡","p":"商议","u":"办公","ut":"办公","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":110,"c":"闲置资产","t":"古蔺县椒园镇椒园村蔬菜大棚流转","a":"古蔺县椒园镇椒园村","d":"古蔺县","v":"蔬菜大棚约 30 亩；土地平整，交通便利，灌溉水源充足。","s":"30 亩","p":"面议","u":"种植","ut":"种植","m":"出租（租期5年）","ct":"罗老师（18008249898）"},{"i":111,"c":"闲置资产","t":"纳溪区上马镇太平村福田牌轻型多用途货车出租","a":"纳溪区上马镇太平村","d":"纳溪区","v":"车辆功能多，价格合适。","s":"1辆","p":"2万元/年（以挂牌价格为准）","u":"运输、办公等","ut":"办公","m":"出租","ct":"余老师(0830-6556086)"},{"i":112,"c":"闲置资产","t":"纳溪区护国镇沙田村久保田30翻土机","a":"纳溪区护国镇沙田村久保田30翻土机","d":"纳溪区","v":"车辆功能多，价格合适。","s":"1辆","p":"3万元/年（以挂牌价格为准）","u":"运输、办公等","ut":"办公","m":"出租","ct":"余老师(0830-6556086)"},{"i":113,"c":"闲置资产","t":"江阳区分水岭青峰村青峰老办公室","a":"泸州市江阳区分水岭镇青峰村八组","d":"江阳区","v":"环境优美，交通便利。","s":"150㎡","p":"0.36万元/年（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":114,"c":"闲置资产","t":"江阳区分水岭青峰村火炬办公室","a":"泸州市江阳区分水岭镇青峰村一组","d":"江阳区","v":"环境优美，交通便利。","s":"100㎡","p":"0.6万元/年（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":115,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼1号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼1号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"888.29㎡","p":"约0.9771万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":116,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼2号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼2号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"84.29㎡","p":"约0.2107万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":117,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼3号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼3号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"59.29㎡","p":"约0.1482万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":118,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼4号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼4号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"60.83㎡","p":"约0.1521万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":119,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼5号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼5号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"60㎡","p":"约0.15万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":120,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼10号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼10号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"51.36㎡","p":"约0.0924万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":121,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼12号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼12号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"77.76㎡","p":"约0.14万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":122,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼13号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼13号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"150㎡","p":"约0.27万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":123,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼14号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼14号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"256.82㎡","p":"约0.2825万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":124,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼16号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼16号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"220㎡","p":"约0.2420万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":125,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼18号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼18号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"304.42㎡","p":"约0.4566万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":126,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼19号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼19号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"137.47㎡","p":"约0.2887万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":127,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼20号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼20号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"157.10㎡","p":"约0.3299万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":128,"c":"闲置资产","t":"江阳区泰安街道酒谷大道六段1号29号楼8号商铺（非集体资产）","a":"江阳区泰安街道酒谷大道六段1号29号楼8号","d":"江阳区","v":"环境优美，交通便利，周边人群固定消费。","s":"68.4㎡","p":"约0.1231万元（以挂牌价为准）","u":"商业","ut":"商业","m":"出租","ct":"余老师(0830-6556086)"},{"i":1,"c":"土地经营权","t":"泸县奇峰镇玉田村 90 亩土地经营权流转","a":"泸县奇峰镇玉田村 1 组 2 组 3 组","d":"泸县","v":"面积比较大，主要用于农用地，发展农业。","s":"90 亩","p":"54000 元/年（以挂牌价为准）","u":"农业、农用地","ut":"其他","m":"出租（租期 1 年）","ct":"郑老师（13088315191）"},{"i":2,"c":"土地经营权","t":"古蔺县石宝镇高山蔬菜种植基地出租","a":"古蔺县石宝镇白玉村","d":"古蔺县","v":"该蔬菜基地拥有标准化大棚约 110 亩；蔬菜基地临河水资源丰富，土地平整，交通便利；基础设施完善，园区生产便道 20km，分拣车间、冻库共计约 3500 ㎡。","s":"110 亩","p":"约 600 元/亩/年（以挂牌价为准）","u":"种植养殖","ut":"养殖","m":"出租（租期 3 年）","ct":"罗老师（18008249898）"},{"i":3,"c":"土地经营权","t":"叙永县落卜镇云山坝村500亩五月脆生态果园","a":"泸州市叙永县落卜镇云山坝村","d":"叙永县","v":"生态果园基地可依托叙永县 “川滇黔结合部” 的区位和交通优势，契合农文旅融合助力乡村振兴的发展战略。","s":"500亩","p":"面议","u":"水果生产经营","ut":"种植","m":"出租","ct":"郭老师（13881773933）"},{"i":4,"c":"土地经营权","t":"泸县兆雅镇花木园区土地承包经营权流转","a":"泸县兆雅镇大石坪村、凤鸣村、两河村","d":"泸县","v":"花木产业园区被评为省级花卉苗木农业标准示范区，园区内种植品种多达 300 余个，有 20 余种名贵品种，年出圃苗木 300 余万株，园区交通便利，紧邻万得路，距云龙高速路口 3.5 公里，距杨九场镇 0.5 公里。","s":"15000 亩","p":"商议（以挂牌价为准）","u":"农业、农用地","ut":"种植","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":5,"c":"土地经营权","t":"泸县兆雅镇古佛村花椒基地出租","a":"泸县兆雅镇古佛村 2.4.14.15 组","d":"泸县","v":"交通便利，自来水全覆盖，已种植了成片挂果花椒树。","s":"300余亩","p":"商议","u":"办公、餐饮","ut":"种植","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":6,"c":"土地经营权","t":"泸县福集镇金峰硅砂矿山地块土地承包经营权流转","a":"泸县福集镇大坪村","d":"泸县","v":"矿山恢复地块共三块，现状为耕地、草地，地势平坦，视野开阔。","s":"135亩","p":"商议","u":"种植、研学、采摘、露营、文旅等项目","ut":"种植","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":7,"c":"土地经营权","t":"泸县福集镇石鸭滩村矿场空地土地承包经营权流转","a":"泸县福集镇石鸭滩村2社","d":"泸县","v":"原采砂场工矿用地，部分已复耕，位于山顶。","s":"23.6亩","p":"商议","u":"与周边黄栀子产业联合打造采摘、露营、农家乐等文旅项目","ut":"文旅休闲","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":8,"c":"土地经营权","t":"泸县福集镇清华村砖厂空地土地承包经营权流转","a":"泸县福集镇清华村2.3社","d":"泸县","v":"原砖厂用地，现状为空地，紧邻村道，适合发展与乡村产业相关的工业项目。","s":"5亩","p":"商议","u":"乡村产业发展","ut":"其他","m":"出租（租期商议）","ct":"郑老师（13088315191）"},{"i":9,"c":"土地经营权","t":"古蔺县茅溪镇庙林村三五水库出租","a":"古蔺县茅溪镇庙林村","d":"古蔺县","v":"庙林村三五水库交通便利，通水电，属庙林村集体资产，三五水库为自然封闭水域，水体容量大，自净能力强，水质优于普通池塘，养殖水产品成活率高，品相好，水源多为山泉水，天然雨水，无污染，无需频繁换水，养殖生态环境优越，水域开阔，水深适中，养出的水产品肉质紧实，无土腥味，目前水库里面有存鱼两千斤左右，均重量约10-20斤左右的大鱼。","s":"15000㎡","p":"6000元/年(最终以实际挂牌金额为准)","u":"水产养殖","ut":"养殖","m":"出租（租期5年）","ct":"罗老师（18008249898）"},{"i":10,"c":"土地经营权","t":"泸州市龙马潭区特兴街道慈竹村新村五口景观池12.5亩土地流转","a":"泸州市龙马潭区特兴街道慈竹村13组66号","d":"龙马潭区","v":"共计约12.5亩，交通便利，土地肥沃。","s":"12.5亩","p":"约0.6135万元/年","u":"休闲娱乐、观光旅游等","ut":"文旅休闲","m":"出租","ct":"余老师(0830-6556086)"},{"i":11,"c":"土地经营权","t":"泸州市龙马潭区特兴街道慈竹村新村钓鱼池及周边共10.1亩土地流转","a":"泸州市龙马潭区特兴街道慈竹村13组66号","d":"龙马潭区","v":"共计约10.1亩，交通便利，土地肥沃。","s":"10.1亩","p":"约0.7593万元/年","u":"休闲娱乐、观光旅游等","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":12,"c":"土地经营权","t":"古蔺县石宝镇佛手柑种植基地出租","a":"古蔺县石宝镇白马村","d":"古蔺县","v":"该基地已种植佛手四年，挂果一年，土地平整，交通便利，园区生产便道 20km，配有烘干房。","s":"300 亩","p":"约 600 元/亩/年（以挂牌价为准）","u":"种植","ut":"种植","m":"出租（租期5年）","ct":"罗老师（18008249898）"},{"i":13,"c":"土地经营权","t":"古蔺县箭竹苗族乡乐园村茶园出租","a":"箭竹苗族乡乐园村茶园","d":"古蔺县","v":"茶园面积共 400 亩，自然条件良好，适宜茶叶种植管护。","s":"400 亩","p":"2026 年一季茶整体打包出售，总价 1 万元","u":"茶叶采摘、销售","ut":"种植","m":"2026 年一季茶整体打包出售","ct":"罗老师（18008249898）"},{"i":14,"c":"土地经营权","t":"叙永县江门镇古寨社区水果种植基地项目","a":"叙永县江门镇古寨社区居民委员会","d":"叙永县","v":"水果种植基地以蜜汁李 40 亩、黑珍珠樱桃 10 亩、沃柑 15 亩分片种植，总面积 65 亩，交通便利，有储水罐且基本全部打围。","s":"65 亩","p":"28880 元/年（以挂牌价为准）","u":"水果种植","ut":"种植","m":"出租（租期5年）","ct":"郭老师（13881773933）"},{"i":15,"c":"土地经营权","t":"江阳区江北镇石鱼村高效水产养殖基地","a":"江阳区江北镇石鱼村14组","d":"江阳区","v":"位于金马湖太阳岛基地，占地面积2000㎡，水源充足，有通社道路，交通便利。","s":"2000㎡","p":"2.5万元/年（以挂牌价为准）","u":"水产养殖","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":16,"c":"土地经营权","t":"泸县玄滩镇磁竹湾山坪塘经营权流转","a":"泸县玄滩镇磁竹湾","d":"泸县","v":"老油房村磁竹湾山坪塘面积约15亩，容积3万立方米，四面环山，中间是塘，环境优美，交通方便，直通塘边。","s":"15亩","p":"5000元/年（以挂牌价为准）","u":"养殖、垂钓","ut":"养殖","m":"出租（租期4年）","ct":"余老师(0830-6556086)"},{"i":17,"c":"土地经营权","t":"泸县兆雅镇型家村扶贫产业园出租","a":"泸县兆雅镇型家村11组","d":"泸县","v":"主导产业为春见种植，春见种植规模约50亩，可打造集农业体验、休闲观光、采摘为一体的现代化产业园。","s":"43.49亩","p":"260元/亩/年（以挂牌价为准）","u":"产业发展","ut":"种植","m":"出租（租期4年）","ct":"郑老师（13088315191）"},{"i":18,"c":"土地经营权","t":"江阳区分水岭镇董允坝村五社新草房鱼塘出租","a":"泸州市江阳区分水岭镇董允坝村五社","d":"江阳区","v":"新草房鱼塘位于董允坝村五组，紧邻伞里景区、红卫聚居点，面积约4亩，呈规则块状。","s":"4亩","p":"0.3312万元/年","u":"蓄水、渔业养殖","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":19,"c":"土地经营权","t":"泸县玄滩镇新山村（2社）罗盘田21.85亩土地承包经营权流转","a":"泸县玄滩镇新山村二社罗盘田","d":"泸县","v":"土地肥沃，交通便利。","s":"21.85 亩","p":"600元/亩/年（以挂牌价为准）","u":"农业种植","ut":"种植","m":"出租（租期4年）","ct":"郑老师（13088315191）"},{"i":20,"c":"土地经营权","t":"泸县云锦镇长潮村花椒基地加工房（附带600余亩土地）","a":"泸县云锦镇长潮村（云锦环山路旁）","d":"泸县","v":"泸县云锦镇长潮村有一处闲置生产加工场地，具备灌溉用水管网和生产路，还有整套烘干储备设备，包括主机 2 台、冷凝器 2 台等众多设备。附带流转土地 600 余亩，意向方竞得后需与四川省泸州市永丰种业有限公司签订土地流转合同。","s":"2666.68 ㎡（附带土地 600 余亩）","p":"176000 元/年（以挂牌价为准）","u":"开展农业产业发展","ut":"种植","m":"出租（租期 10 年）","ct":"郑老师（13088315191）"},{"i":21,"c":"土地经营权","t":"泸县潮河镇唐寺村芦柑草种植基地土地承包经营权转让","a":"泸县潮河镇唐寺村 2 社","d":"泸县","v":"土地肥沃，交通便利。","s":"159.531 亩","p":"4300元/年（以挂牌价为准）","u":"农业种植","ut":"种植","m":"出租（租期 4 年）","ct":"郑老师（13088315191）"},{"i":22,"c":"土地经营权","t":"泸县云锦镇烟霞阁社区商用地（一）","a":"泸县云锦镇烟霞阁社区","d":"泸县","v":"临街，交通便利","s":"约 125 亩","p":"","u":"拟选址修建商业中心，可用于商业、住宅开发。","ut":"商业","m":"","ct":"郑老师（13088315191）"},{"i":23,"c":"土地经营权","t":"泸县云锦镇烟霞阁社区商用地（二）","a":"泸县云锦镇烟霞阁社区","d":"泸县","v":"临街，交通便利","s":"约 58 亩","p":"","u":"可用于商业、住宅开发。","ut":"商业","m":"","ct":"郑老师（13088315191）"},{"i":24,"c":"土地经营权","t":"泸县云龙镇战旗村荔枝产业园","a":"泸县云龙镇战旗村六社","d":"泸县","v":"交通便利，水源充足，地势平坦，土壤肥沃，设施完备。","s":"56.26 亩","p":"约 36668 元/年（以挂牌价为准）","u":"荔枝园果园和旅游经营","ut":"种植","m":"出租（租期5年）","ct":"郑老师（13088315191）"},{"i":25,"c":"土地经营权","t":"泸县潮河镇王坪村扶贫产业园（花椒）土地经营权出租","a":"泸县潮河镇王坪 1.6.7 组","d":"泸县","v":"紧邻龙城大道，交通便利。","s":"200 亩","p":"约 280 元/亩/年（以挂牌价为准）","u":"花果类种植","ut":"种植","m":"出租（租期5年）","ct":"郑老师（13088315191）"},{"i":26,"c":"土地经营权","t":"泸县方洞镇石牌坊村230亩粮油种植土地经营权出租","a":"泸县方洞镇石牌坊村","d":"泸县","v":"项目区土地平整，交通便利，水渠等农业基础设施完备，能满足基本农业生产需要。","s":"230 亩","p":"约 450 元/亩/年（以挂牌价为准）","u":"粮油种植","ut":"种植","m":"出租（租期5年）","ct":"郑老师（13088315191）"},{"i":27,"c":"土地经营权","t":"泸县云锦镇石马社区商用地（一）","a":"泸县云锦镇石马社区","d":"泸县","v":"临街，交通便利","s":"约 1.34 亩","p":"","u":"可用于商业、住宅开发。","ut":"商业","m":"","ct":"郑老师（13088315191）"},{"i":28,"c":"土地经营权","t":"泸县云锦镇石马社区商用地（二）","a":"泸县云锦镇石马社区","d":"泸县","v":"临街，交通便利","s":"约 10 亩","p":"","u":"拟选址迁建石马农贸市场。","ut":"其他","m":"","ct":"郑老师（13088315191）"},{"i":29,"c":"土地经营权","t":"泸县云锦镇天台寺村工业用地","a":"泸县云锦镇天台寺村","d":"泸县","v":"紧邻 G246、渝昆高铁泸州东站。","s":"约 23 亩","p":"","u":"可用于工业建设","ut":"其他","m":"","ct":"郑老师（13088315191）"},{"i":30,"c":"土地经营权","t":"古蔺县茅溪镇林地经营权流转","a":"古蔺县茅溪镇","d":"古蔺县","v":"林地约 2000 亩，交通便利。","s":"2000 亩","p":"300 元/亩","u":"种植","ut":"种植","m":"出租（租期 20 年）","ct":"罗老师（18008249898）"},{"i":31,"c":"土地经营权","t":"合江县符阳街道大同村10组鱼塘出租","a":"合江县符阳街道大同村10组鱼塘","d":"合江县","v":"详情请现勘。","s":"100㎡（文件未提供，按示例暂填）","p":"0.5万元/年（以挂牌价为准）","u":"生产设施、冷藏设备","ut":"养殖","m":"出租（租期4年）","ct":"侯老师（13548341167）"},{"i":32,"c":"土地经营权","t":"合江县符阳街道文桥村8组鱼塘出租","a":"合江县符阳街道文桥村8组鱼塘","d":"合江县","v":"详情请现勘。","s":"100㎡","p":"2万元/年（以挂牌价为准）","u":"生产设施、冷藏设备","ut":"养殖","m":"出租（租期4年）","ct":"侯老师（13548341167）"},{"i":33,"c":"土地经营权","t":"合江县符阳街道黄溪村六组、7组新鱼塘出租","a":"合江县符阳街道黄溪村六组、7组新鱼塘","d":"合江县","v":"详情请现勘。","s":"100㎡","p":"1.6万元/年（以挂牌价为准）","u":"生产设施、冷藏设备","ut":"养殖","m":"出租（租期4年）","ct":"侯老师（13548341167）"},{"i":34,"c":"土地经营权","t":"合江县符阳街道山顶上村1.3.10.12组鱼塘出租","a":"合江县符阳街道山顶上村1.3.10.12组鱼塘","d":"合江县","v":"详情请现勘。","s":"100㎡","p":"1.2万元/年（以挂牌价为准）","u":"生产设施、冷藏设备","ut":"养殖","m":"出租（租期4年）","ct":"侯老师（13548341167）"},{"i":35,"c":"土地经营权","t":"龙马潭区石洞街道雨珠岩村大土湾水库","a":"泸州市龙马潭区石洞街道雨珠岩村","d":"龙马潭区","v":"交通便利，环境优美。","s":"49亩","p":"3万元/年（以挂牌价为准）","u":"渔业养殖、农业生产蓄水","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":36,"c":"土地经营权","t":"合江县临港街道金银石村六组鱼塘出租","a":"合江县临港街道金银石村六组鱼塘","d":"合江县","v":"详情请现勘。","s":"100㎡","p":"1.25万元/年（以挂牌价为准）","u":"生产设施、冷藏设备","ut":"养殖","m":"出租（租期4年）","ct":"余老师(0830-6556086)"},{"i":37,"c":"土地经营权","t":"江阳区黄舣镇界牌村李沟水库","a":"泸州市江阳区黄舣镇界牌村","d":"江阳区","v":"交通便利。","s":"300㎡","p":"0.6万元/年（以挂牌价为准）","u":"水产养殖。","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":38,"c":"土地经营权","t":"江阳区分水岭青峰村十组阳坡山水库","a":"泸州市江阳区分水岭镇青峰村十组阳坡山水库","d":"江阳区","v":"环境优美，交通便利。","s":"待定","p":"0.5万元/年（以挂牌价为准）","u":"水产养殖","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":39,"c":"土地经营权","t":"江阳区分水岭青峰村十社阳坡山水库","a":"泸州市江阳区分水岭镇青峰村","d":"江阳区","v":"环境优美，交通便利。","s":"5亩","p":"0.5万元/年（以挂牌价为准）","u":"水产养殖","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":40,"c":"土地经营权","t":"江阳区分水岭青峰村四组花渡井、五组丁榜土地流转","a":"泸州市江阳区分水岭镇青峰村","d":"江阳区","v":"环境优美，交通便利。","s":"200亩","p":"200元/亩/年（以挂牌价为准）","u":"农业种植","ut":"种植","m":"出租","ct":"余老师(0830-6556086)"},{"i":41,"c":"土地经营权","t":"江阳区分水岭董允坝村九社河湾－王河边、董允坝村十社簸箕湾","a":"泸州市江阳区分水岭镇青峰村","d":"江阳区","v":"环境优美，交通便利。","s":"97亩","p":"828元/亩/年（以挂牌价为准）","u":"农业种植","ut":"种植","m":"出租","ct":"余老师(0830-6556086)"},{"i":42,"c":"土地经营权","t":"江阳区蓝田街道红光村冯贯水库","a":"泸州市江阳区蓝田街道红光村","d":"江阳区","v":"环境优美，交通便利。","s":"30亩","p":"0.2万元/年（以挂牌价为准）","u":"灌溉、水产养殖","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":43,"c":"土地经营权","t":"江阳区泰安街道阳院子鱼塘","a":"泸州市江阳区泰安街道","d":"江阳区","v":"环境优美，交通便利。","s":"8.5亩","p":"0.45万元（以挂牌价为准）","u":"灌溉、垂钓、水产养殖","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"},{"i":44,"c":"土地经营权","t":"江阳区通滩镇桐子湾村桂花嘴水库","a":"泸州市江阳区通滩镇桐子湾","d":"江阳区","v":"环境优美，交通便利。","s":"1200㎡","p":"0.15万元（以挂牌价为准）","u":"渔业养殖","ut":"养殖","m":"出租","ct":"余老师(0830-6556086)"}];
+
+let fCat='all',fDist='all',fUsage='all',fSearch='';
+
+/* ===== Tab Switch ===== */
+function switchTab(t){
+  document.querySelectorAll('.tab-item').forEach(el=>el.classList.toggle('active',el.dataset.tab===t));
+  document.getElementById('tabList').style.display=t==='list'?'':'none';
+  document.getElementById('tabChart').style.display=t==='chart'?'':'none';
+  if(t==='chart')renderCharts();
+}
+
+/* ===== Filters ===== */
+function setupF(id,key,set){
+  document.getElementById(id).addEventListener('click',e=>{
+    const t=e.target.closest('.ftag');if(!t)return;
+    document.getElementById(id).querySelectorAll('.ftag').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');set(t.dataset.v);renderCards();
+  });
+}
+setupF('fCat','v',v=>fCat=v);
+setupF('fDist','v',v=>fDist=v);
+setupF('fUsage','v',v=>fUsage=v);
+document.getElementById('sInput').addEventListener('input',e=>{fSearch=e.target.value.trim();renderCards();});
+
+/* ===== Render Cards ===== */
+function renderCards(){
+  const box=document.getElementById('cardBox');
+  const empty=document.getElementById('emptyBox');
+  let list=D.filter(i=>{
+    if(fCat!=='all'&&i.c!==fCat)return false;
+    if(fDist!=='all'&&i.d!==fDist)return false;
+    if(fUsage!=='all'&&i.ut!==fUsage)return false;
+    if(fSearch){const q=fSearch.toLowerCase();if(!(i.t+i.a+i.u+i.v+i.p+i.d+i.ut).toLowerCase().includes(q))return false;}
+    return true;
+  });
+  document.getElementById('sTotal').textContent=list.length;
+  document.getElementById('resInfo').textContent='共 '+list.length+' 个项目';
+  if(!list.length){box.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  const groups={};list.forEach(i=>{if(!groups[i.c])groups[i.c]=[];groups[i.c].push(i);});
+  let h='';
+  const catOrder=['闲置资产','土地经营权'];
+  catOrder.forEach(cat=>{
+    if(!groups[cat])return;
+    const icon=cat==='闲置资产'?'🏠':'🌾';
+    h+=`<div class="section-hd"><div class="ico">${icon}</div>${cat}<span class="cnt">${groups[cat].length}个项目</span></div>`;
+    h+='<div class="card-list">';
+    groups[cat].forEach((item,idx)=>{
+      const isL=item.c==='土地经营权';
+      h+=`<div class="card${isL?' land':''}" style="animation-delay:${Math.min(idx*0.03,0.5)}s" onclick="toggleC(this)">
+        <div class="card-hd"><span class="card-num">${item.i}</span><div class="card-title">${item.t}</div></div>
+        <div class="card-tags">
+          <span class="ctag ct-d">${item.d}</span>
+          <span class="ctag ct-u">${item.ut}</span>
+          ${item.s?`<span class="ctag ct-s">${item.s}</span>`:''}
+          ${item.p?`<span class="ctag ct-p">${item.p}</span>`:''}
+          ${item.m?`<span class="ctag ct-m">${item.m}</span>`:''}
+        </div>
+        ${item.v?`<div class="card-desc">${item.v}</div>`:''}
+        ${item.p?`<div class="card-price">💰 ${item.p}</div>`:''}
+        <div class="card-detail">
+          ${item.a?`<div class="d-row"><span class="d-lbl">📍 地址</span><span class="d-val">${item.a}</span></div>`:''}
+          ${item.s?`<div class="d-row"><span class="d-lbl">📐 面积</span><span class="d-val">${item.s}</span></div>`:''}
+          ${item.p?`<div class="d-row"><span class="d-lbl">💰 价格</span><span class="d-val">${item.p}</span></div>`:''}
+          ${item.u?`<div class="d-row"><span class="d-lbl">📌 用途</span><span class="d-val">${item.u}</span></div>`:''}
+          ${item.m?`<div class="d-row"><span class="d-lbl">📝 方式</span><span class="d-val">${item.m}</span></div>`:''}
+          ${item.v?`<div class="d-row"><span class="d-lbl">✨ 优势</span><span class="d-val">${item.v}</span></div>`:''}
+          ${item.ct?`<button class="ctc-btn" onclick="event.stopPropagation();copyCtc(this,'${item.ct.replace(/'/g,"\\'")}')">📞 ${item.ct}</button>`:''}
+        </div>
+      </div>`;
+    });
+    h+='</div>';
+  });
+  box.innerHTML=h;
+}
+
+function toggleC(el){el.classList.toggle('expanded');}
+function copyCtc(btn,info){
+  if(navigator.clipboard){navigator.clipboard.writeText(info).then(()=>{btn.classList.add('copied');btn.textContent='✅ 已复制';setTimeout(()=>{btn.classList.remove('copied');btn.innerHTML='📞 '+info;},2000);});}
+  else{alert('联系方式：'+info);}
+}
+
+/* ===== Charts ===== */
+const COLORS=['#1a7a4c','#f0a030','#2196f3','#e91e63','#9c27b0','#ff5722','#00bcd4','#795548'];
+const DIST_ORDER=['泸县','江阳区','合江县','古蔺县','叙永县','龙马潭区','纳溪区'];
+const USAGE_ORDER=['办公','养殖','商业','种植','其他','教育','加工仓储','文旅休闲'];
+const USAGE_COLORS={'办公':'#2196f3','养殖':'#ff5722','商业':'#f0a030','种植':'#1a7a4c','其他':'#9e9e9e','教育':'#9c27b0','加工仓储':'#795548','文旅休闲':'#00bcd4'};
+
+function renderCharts(){
+  // District bar chart
+  const dCounts={};DIST_ORDER.forEach(d=>dCounts[d]=0);D.forEach(i=>{if(dCounts[i.d]!==undefined)dCounts[i.d]++;else dCounts[i.d]=1;});
+  const dMax=Math.max(...Object.values(dCounts));
+  let dH='';DIST_ORDER.forEach((d,idx)=>{
+    const v=dCounts[d]||0;const pct=dMax?(v/dMax*100):0;
+    dH+=`<div class="bar-row"><span class="bar-label">${d}</span><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${COLORS[idx%COLORS.length]}">${v}</div></div><span class="bar-val">${v}项</span></div>`;
+  });
+  document.getElementById('chartDistrict').innerHTML=dH;
+
+  // Category donut
+  const catCounts={};D.forEach(i=>{catCounts[i.c]=(catCounts[i.c]||0)+1;});
+  const catTotal=D.length;let angle=0;let arcs='';let legend='';
+  Object.keys(catCounts).forEach((k,idx)=>{
+    const pct=catCounts[k]/catTotal;const startAngle=angle;angle+=pct*360;const endAngle=angle;
+    const x1=70+55*Math.cos(startAngle*Math.PI/180-90*Math.PI/180);
+    const y1=70+55*Math.sin(startAngle*Math.PI/180-90*Math.PI/180);
+    const x2=70+55*Math.cos(endAngle*Math.PI/180-90*Math.PI/180);
+    const y2=70+55*Math.sin(endAngle*Math.PI/180-90*Math.PI/180);
+    const large=pct>0.5?1:0;
+    arcs+=`<path d="M70,70 L${x1},${y1} A55,55 0 ${large},1 ${x2},${y2} Z" fill="${COLORS[idx]}"/>`;
+    legend+=`<div class="legend-item"><div class="legend-dot" style="background:${COLORS[idx]}"></div>${k}：${catCounts[k]}项 (${(pct*100).toFixed(1)}%)</div>`;
+  });
+  document.getElementById('chartCategory').innerHTML=`<svg class="donut-svg" viewBox="0 0 140 140"><circle cx="70" cy="70" r="35" fill="#fff"/>${arcs}<text x="70" y="68" text-anchor="middle" font-size="18" font-weight="800" fill="#2c3e2c">${catTotal}</text><text x="70" y="82" text-anchor="middle" font-size="9" fill="#6b7c6b">项目</text></svg><div class="donut-legend">${legend}</div>`;
+
+  // Usage bar chart
+  const uCounts={};USAGE_ORDER.forEach(u=>uCounts[u]=0);D.forEach(i=>{if(uCounts[i.ut]!==undefined)uCounts[i.ut]++;else uCounts[i.ut]=(uCounts[i.ut]||0)+1;});
+  const uMax=Math.max(...Object.values(uCounts));
+  let uH='';USAGE_ORDER.forEach(u=>{
+    const v=uCounts[u]||0;const pct=uMax?(v/uMax*100):0;
+    uH+=`<div class="bar-row"><span class="bar-label">${u}</span><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${USAGE_COLORS[u]||'#999'}">${v}</div></div><span class="bar-val">${v}项</span></div>`;
+  });
+  document.getElementById('chartUsage').innerHTML=uH;
+
+  // Price range
+  const pRanges={'面议':0,'1万以下':0,'1-5万':0,'5-20万':0,'20万以上':0};
+  D.forEach(i=>{
+    const p=i.p||'';
+    if('面议商议'.split('').some(c=>p.includes(c))){pRanges['面议']++;}
+    else{const nums=p.match(/[\d.]+/);if(nums){let v=parseFloat(nums[0]);if(p.includes('万元')){}else if(p.includes('元'))v/=10000;if(v<1)pRanges['1万以下']++;else if(v<5)pRanges['1-5万']++;else if(v<20)pRanges['5-20万']++;else pRanges['20万以上']++;}else pRanges['面议']++;}
+  });
+  const pMax=Math.max(...Object.values(pRanges));
+  const pColors=['#9e9e9e','#4caf50','#2196f3','#ff9800','#f44336'];
+  let pH='';Object.keys(pRanges).forEach((k,idx)=>{
+    const v=pRanges[k];const pct=pMax?(v/pMax*100):0;
+    pH+=`<div class="bar-row"><span class="bar-label">${k}</span><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${pColors[idx]}">${v}</div></div><span class="bar-val">${v}项</span></div>`;
+  });
+  document.getElementById('chartPrice').innerHTML=pH;
+
+  // Stacked bar: district x category
+  const stacked={};DIST_ORDER.forEach(d=>{stacked[d]={'闲置资产':0,'土地经营权':0};});
+  D.forEach(i=>{if(stacked[i.d])stacked[i.d][i.c]++;});
+  const sMax=Math.max(...DIST_ORDER.map(d=>stacked[d]['闲置资产']+stacked[d]['土地经营权']));
+  let sH='<div style="min-width:320px">';
+  DIST_ORDER.forEach(d=>{
+    const a=stacked[d]['闲置资产'],b=stacked[d]['土地经营权'],total=a+b;
+    const aPct=sMax?(a/sMax*100):0,bPct=sMax?(b/sMax*100):0;
+    sH+=`<div class="bar-row"><span class="bar-label">${d}</span><div class="bar-track" style="display:flex"><div style="width:${aPct}%;height:100%;background:#1a7a4c;border-radius:11px 0 0 11px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:600">${a||''}</div><div style="width:${bPct}%;height:100%;background:#f0a030;border-radius:0 11px 11px 0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:600">${b||''}</div></div><span class="bar-val">${total}项</span></div>`;
+  });
+  sH+='<div style="display:flex;gap:16px;justify-content:center;margin-top:10px;font-size:11px"><div style="display:flex;align-items:center;gap:4px"><div style="width:12px;height:12px;background:#1a7a4c;border-radius:3px"></div>闲置资产</div><div style="display:flex;align-items:center;gap:4px"><div style="width:12px;height:12px;background:#f0a030;border-radius:3px"></div>土地经营权</div></div></div>';
+  document.getElementById('chartStacked').innerHTML=sH;
+
+  // Animate fade-up
+  setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('visible');});},100);
+}
+
+/* ===== Scroll ===== */
+window.addEventListener('scroll',()=>{
+  document.getElementById('btt').classList.toggle('show',window.scrollY>400);
+  document.querySelectorAll('.fade-up').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight-50)el.classList.add('visible');});
+});
+
+/* ===== Share ===== */
+function openShare(){document.getElementById('shareModal').classList.add('show');}
+function closeShare(e){if(e.target===document.getElementById('shareModal')||e.target.closest('.modal-x'))document.getElementById('shareModal').classList.remove('show');}
+function copyLink(){
+  var url=location.href;
+  navigator.clipboard.writeText(url).then(function(){
+    alert('✅ 链接已复制！\n\n操作步骤：\n1. 打开微信\n2. 选择好友或朋友圈\n3. 粘贴发送\n\n朋友点开即可查看完整清单');
+  }).catch(function(){
+    // fallback: create temp input
+    var inp=document.createElement('input');inp.value=url;
+    document.body.appendChild(inp);inp.select();
+    document.execCommand('copy');document.body.removeChild(inp);
+    alert('✅ 链接已复制！\n\n打开微信粘贴发送即可');
+  });
+  document.getElementById('shareModal').classList.remove('show');
+}
+
+/* ===== Canvas Poster Generation ===== */
+var _posterDataUrl=null;
+function genPoster(){
+  document.getElementById('shareModal').classList.remove('show');
+  var W=750,H=1334,c=document.createElement('canvas');
+  c.width=W;c.height=H;
+  var x=c.getContext('2d');
+
+  // 1. 渐变背景
+  var bg=x.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#0d3d1f');bg.addColorStop(0.5,'#1a7a4c');bg.addColorStop(1,'#2ea06a');
+  x.fillStyle=bg;x.fillRect(0,0,W,H);
+
+  // 2. 装饰圆
+  x.globalAlpha=0.08;
+  x.beginPath();x.arc(650,180,260,0,Math.PI*2);x.fillStyle='#fff';x.fill();
+  x.beginPath();x.arc(100,1100,200,0,Math.PI*2);x.fill();
+  x.globalAlpha=1;
+
+  // 3. 顶部标签
+  x.fillStyle='rgba(255,255,255,0.2)';
+  roundRect(x,270,60,210,36,18);x.fill();
+  x.fillStyle='#fff';x.font='bold 18px sans-serif';x.textAlign='center';
+  x.fillText('2026年第5期',375,84);
+
+  // 4. 标题
+  x.fillStyle='#fff';x.font='bold 42px sans-serif';x.textAlign='center';
+  x.fillText('泸州市农村资源要素',375,170);
+  x.fillText('机会清单',375,226);
+
+  // 5. 分割线
+  x.strokeStyle='rgba(255,255,255,0.3)';x.lineWidth=1;
+  x.beginPath();x.moveTo(200,268);x.lineTo(550,268);x.stroke();
+
+  // 6. 核心数据
+  var stats=[{n:'172',l:'项目总数'},{n:'7',l:'覆盖区县'},{n:'2',l:'资源类别'}];
+  var sw=180,sx=(W-3*sw)/2;
+  stats.forEach(function(s,i){
+    var cx=sx+sw*i+sw/2;
+    x.fillStyle='#f0a030';x.font='bold 56px sans-serif';x.textAlign='center';
+    x.fillText(s.n,cx,360);
+    x.fillStyle='rgba(255,255,255,0.8)';x.font='18px sans-serif';
+    x.fillText(s.l,cx,392);
+  });
+
+  // 7. 区县分布小条
+  x.fillStyle='rgba(255,255,255,0.15)';
+  roundRect(x,60,440,W-120,280,16);x.fill();
+  x.fillStyle='#fff';x.font='bold 20px sans-serif';x.textAlign='left';
+  x.fillText('📊 区县项目分布',90,478);
+
+  var dists=[
+    {name:'江阳区',cnt:28},{name:'龙马潭区',cnt:22},{name:'纳溪区',cnt:25},
+    {name:'泸县',cnt:30},{name:'合江县',cnt:27},{name:'叙永县',cnt:22},{name:'古蔺县',cnt:18}
+  ];
+  var maxCnt=30,bx=140,bw=460,bh=22,gap=32,sy=505;
+  dists.forEach(function(d,i){
+    var y=sy+i*gap;
+    x.fillStyle='rgba(255,255,255,0.7)';x.font='14px sans-serif';x.textAlign='right';
+    x.fillText(d.name,bx-10,y+bh-5);
+    // bar bg
+    x.fillStyle='rgba(255,255,255,0.15)';
+    roundRect(x,bx,y,bw,bh,6);x.fill();
+    // bar fill
+    var fw=Math.max(bh,bw*(d.cnt/maxCnt));
+    var grd=x.createLinearGradient(bx,0,bx+fw,0);
+    grd.addColorStop(0,'#f0a030');grd.addColorStop(1,'#ffd166');
+    x.fillStyle=grd;
+    roundRect(x,bx,y,fw,bh,6);x.fill();
+    // count
+    x.fillStyle='#fff';x.font='bold 13px sans-serif';x.textAlign='left';
+    x.fillText(d.cnt+'个',bx+fw+10,y+bh-5);
+  });
+
+  // 8. 二维码占位
+  x.fillStyle='#fff';
+  roundRect(x,300,770,150,150,16);x.fill();
+  x.fillStyle='#1a7a4c';x.font='bold 16px sans-serif';x.textAlign='center';
+  x.fillText('扫码查看',375,830);
+  x.fillText('完整清单',375,856);
+  // QR pattern
+  x.fillStyle='#1a7a4c';
+  for(var qi=0;qi<5;qi++)for(var qj=0;qj<5;qj++){
+    if((qi+qj)%2===0){x.fillRect(318+qi*10,870+qj*10,8,8);}
+  }
+
+  // 9. 底部信息
+  x.fillStyle='rgba(255,255,255,0.6)';x.font='14px sans-serif';x.textAlign='center';
+  x.fillText('数据来源：泸州市农业农村局',375,980);
+  x.fillText('价格以实际挂牌为准',375,1004);
+
+  // 10. 底部装饰条
+  var ft=x.createLinearGradient(0,0,W,0);
+  ft.addColorStop(0,'#f0a030');ft.addColorStop(1,'#ffd166');
+  x.fillStyle=ft;
+  roundRect(x,200,1050,350,6,3);x.fill();
+
+  // 11. 底部提示
+  x.fillStyle='rgba(255,255,255,0.5)';x.font='13px sans-serif';
+  x.fillText('长按保存图片 · 分享给更多朋友',375,1100);
+
+  _posterDataUrl=c.toDataURL('image/png');
+  var wrap=document.getElementById('posterImgWrap');
+  wrap.innerHTML='<img src="'+_posterDataUrl+'" alt="分享海报">';
+  document.getElementById('posterModal').classList.add('show');
+}
+
+function roundRect(ctx,rx,ry,rw,rh,rr){
+  rr=Math.min(rr,rw/2,rh/2);
+  ctx.beginPath();ctx.moveTo(rx+rr,ry);
+  ctx.lineTo(rx+rw-rr,ry);ctx.quadraticCurveTo(rx+rw,ry,rx+rw,ry+rr);
+  ctx.lineTo(rx+rw,ry+rh-rr);ctx.quadraticCurveTo(rx+rw,ry+rh,rx+rw-rr,ry+rh);
+  ctx.lineTo(rx+rr,ry+rh);ctx.quadraticCurveTo(rx,ry+rh,rx,ry+rh-rr);
+  ctx.lineTo(rx,ry+rr);ctx.quadraticCurveTo(rx,ry,rx+rr,ry);
+  ctx.closePath();
+}
+
+function downloadPoster(){
+  if(!_posterDataUrl){alert('请先生成海报');return;}
+  var a=document.createElement('a');
+  a.href=_posterDataUrl;
+  a.download='泸州市农村资源要素机会清单_分享海报.png';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+}
+
+function closePoster(){
+  document.getElementById('posterModal').classList.remove('show');
+}
+
+/* ===== Init ===== */
+renderCards();
+</script>
+</body>
+</html>
