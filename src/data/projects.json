@@ -1,0 +1,162 @@
+[
+  {
+    "id": "p001",
+    "title": "双流区黄水镇100亩土地经营权流转",
+    "type": "土地经营权",
+    "area": 100,
+    "price": 5000000,
+    "location": "成都市双流区黄水镇",
+    "district": "双流区",
+    "status": "招拍中",
+    "description": "该土地位于双流区黄水镇，交通便利，水源充足，适合发展现代高效农业。土地已进行标准化整理，配套设施完善，包括灌溉系统、田间道路等。流转期限30年，适合规模化种植或休闲农业开发。",
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800",
+      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800"
+    ],
+    "publishDate": "2024-01-15",
+    "contact": {
+      "name": "张经理",
+      "phone": "028-86567890"
+    }
+  },
+  {
+    "id": "p002",
+    "title": "都江堰市龙池镇200亩林权转让",
+    "type": "林权",
+    "area": 200,
+    "price": 8000000,
+    "location": "成都市都江堰市龙池镇",
+    "district": "都江堰市",
+    "status": "招拍中",
+    "description": "林地位于都江堰市龙池镇原始森林边缘，生态环境优越，木材蓄积量丰富。树种以杉木、柏木为主，树龄15-20年。林下资源丰富，适合发展林下种养殖业。转让期限50年。",
+    "images": [
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800",
+      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800"
+    ],
+    "publishDate": "2024-01-10",
+    "contact": {
+      "name": "李经理",
+      "phone": "028-86567891"
+    }
+  },
+  {
+    "id": "p003",
+    "title": "郫都区安德镇10亩集体经营性建设用地",
+    "type": "集体经营性建设用地",
+    "area": 10,
+    "price": 15000000,
+    "location": "成都市郫都区安德镇",
+    "district": "郫都区",
+    "status": "招拍中",
+    "description": "该地块位于郫都区安德镇场镇规划区内，土地性质为集体经营性建设用地，可用于商业开发、工业建设等。地块平整，权属清晰，已取得相关审批手续。",
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+    ],
+    "publishDate": "2024-01-08",
+    "contact": {
+      "name": "王经理",
+      "phone": "028-86567892"
+    }
+  },
+  {
+    "id": "p004",
+    "title": "彭州市龙门山镇50亩耕地经营权流转",
+    "type": "土地经营权",
+    "area": 50,
+    "price": 2500000,
+    "location": "成都市彭州市龙门山镇",
+    "district": "彭州市",
+    "status": "已成交",
+    "description": "位于彭州龙门山镇，海拔较高，生态环境优良，适合发展高山蔬菜或特色种植。土地已通过有机认证转换期，适合发展有机农业。流转期限20年。",
+    "images": [
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800",
+      "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800"
+    ],
+    "publishDate": "2023-12-20",
+    "contact": {
+      "name": "赵经理",
+      "phone": "028-86567893"
+    }
+  },
+  {
+    "id": "p005",
+    "title": "大邑县雾山镇30亩林权转让",
+    "type": "林权",
+    "area": 30,
+    "price": 1200000,
+    "location": "成都市大邑县雾山镇",
+    "district": "大邑县",
+    "status": "招拍中",
+    "description": "林地位于大邑县雾山镇，树种为经济林木（核桃、柑橘），已进入盛果期。配套设施完善，包括蓄水池、生产管理用房等。转让期限40年。",
+    "images": [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=800"
+    ],
+    "publishDate": "2024-01-05",
+    "contact": {
+      "name": "刘经理",
+      "phone": "028-86567894"
+    }
+  },
+  {
+    "id": "p006",
+    "title": "金堂县又新镇村集体资产（厂房）转让",
+    "type": "集体资产",
+    "area": 5,
+    "price": 3500000,
+    "location": "成都市金堂县又新镇",
+    "district": "金堂县",
+    "status": "招拍中",
+    "description": "该资产为村集体所有的标准化厂房，位于工业园区内，建筑面积约3500平方米。厂房手续齐全，水电气三通，适合轻加工、仓储物流等用途。",
+    "images": [
+      "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+    ],
+    "publishDate": "2024-01-03",
+    "contact": {
+      "name": "陈经理",
+      "phone": "028-86567895"
+    }
+  },
+  {
+    "id": "p007",
+    "title": "崇州市怀远镇80亩农业设施用地流转",
+    "type": "农业设施用地",
+    "area": 80,
+    "price": 4000000,
+    "location": "成都市崇州市怀远镇",
+    "district": "崇州市",
+    "status": "招拍中",
+    "description": "该地块已取得农业设施用地审批，可用于建设农业生产附属设施、管理用房、烘干设施等。地块平整，交通便利，适合农业项目配套建设。流转期限30年。",
+    "images": [
+      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=800"
+    ],
+    "publishDate": "2024-01-02",
+    "contact": {
+      "name": "周经理",
+      "phone": "028-86567896"
+    }
+  },
+  {
+    "id": "p008",
+    "title": "新都区斑竹园镇150亩土地经营权流转",
+    "type": "土地经营权",
+    "area": 150,
+    "price": 7500000,
+    "location": "成都市新都区斑竹园镇",
+    "district": "新都区",
+    "status": "招拍中",
+    "description": "土地位于新都区斑竹园镇，地势平坦，土壤肥沃，适合粮食作物或经济作物种植。配套设施完善，流转期限25年，适合规模化农业经营。",
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800",
+      "https://images.unsplash.com/photo-1438401171847-78e3e4c2a84e?w=800"
+    ],
+    "publishDate": "2023-12-28",
+    "contact": {
+      "name": "吴经理",
+      "phone": "028-86567897"
+    }
+  }
+]
