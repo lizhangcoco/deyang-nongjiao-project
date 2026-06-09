@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-neutral-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -26,7 +26,18 @@ export default function Footer() {
               <li><Link to="/about" className="hover:text-white transition-colors">关于我们</Link></li>
               <li><Link to="/projects" className="hover:text-white transition-colors">交易项目</Link></li>
               <li><Link to="/guide" className="hover:text-white transition-colors">交易指南</Link></li>
+              <li><Link to="/policies" className="hover:text-white transition-colors">政策法规</Link></li>
+            </ul>
+          </div>
+
+          {/* Special Links */}
+          <div>
+            <h3 className="font-semibold mb-4">特色栏目</h3>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link to="/investor-education" className="hover:text-white transition-colors">投资者教育</Link></li>
+              <li><Link to="/party-building" className="hover:text-white transition-colors">党的建设</Link></li>
               <li><Link to="/news" className="hover:text-white transition-colors">新闻中心</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">联系我们</Link></li>
             </ul>
           </div>
 

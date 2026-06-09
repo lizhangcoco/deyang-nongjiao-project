@@ -9,6 +9,8 @@ const navItems = [
   { path: '/projects', label: '交易项目' },
   { path: '/guide', label: '交易指南' },
   { path: '/policies', label: '政策法规' },
+  { path: '/investor-education', label: '投资者教育' },
+  { path: '/party-building', label: '党的建设' },
   { path: '/news', label: '新闻中心' },
   { path: '/contact', label: '联系我们' },
 ];
