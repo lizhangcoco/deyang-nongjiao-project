@@ -1,0 +1,12 @@
+<view class="flow">
+  <block wx:for="{{steps}}" wx:key="step">
+    <view class="flow-item {{item.step <= currentStep ? 'done' : ''}} {{item.step === currentStep ? 'current' : ''}}">
+      <view class="dot">{{item.step}}</view>
+      <view class="info">
+        <view class="step-name">{{item.name}}</view>
+        <view class="step-role">{{item.role}}</view>
+      </view>
+    </view>
+    <view wx:if="{{index < steps.length - 1}}" class="flow-line {{item.step < currentStep ? 'active' : ''}}"></view>
+  </block>
+</view>

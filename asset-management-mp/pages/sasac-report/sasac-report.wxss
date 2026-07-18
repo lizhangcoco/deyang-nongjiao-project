@@ -1,0 +1,15 @@
+.sr-page { padding-bottom: 40rpx; }
+.page-header { background: linear-gradient(135deg, #c0392b, #8e1c1c); padding: 40rpx 32rpx; color: #fff; }
+.page-header .title { font-size: 36rpx; font-weight: 600; }
+.page-header .sub { font-size: 22rpx; opacity: 0.85; margin-top: 8rpx; }
+.kpi-grid { display: flex; padding: 12rpx 0; }
+.kpi-item { flex: 1; text-align: center; border-right: 1rpx solid #ecf0f1; }
+.kpi-item:last-child { border-right: none; }
+.kpi-num { font-size: 32rpx; font-weight: 600; }
+.kpi-lbl { font-size: 22rpx; color: #95a5a6; margin-top: 4rpx; }
+.actions { padding: 24rpx; }
+.sr-item { padding: 16rpx 0; border-bottom: 1rpx solid #ecf0f1; }
+.sr-item:last-child { border-bottom: none; }
+.sr-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8rpx; }
+.sr-no { font-size: 22rpx; color: #95a5a6; }
+.sr-meta { display: flex; justify-content: space-between; font-size: 24rpx; color: #34495e; margin-bottom: 4rpx; }

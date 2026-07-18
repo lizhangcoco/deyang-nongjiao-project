@@ -1,0 +1,72 @@
+<view class="ex-page">
+  <view class="page-header">
+    <view class="title">🏪 进场交易 <text class="soe-badge">SOE</text></view>
+    <view class="sub">国资委32号令 · 强制进场 · 挂牌价≥评估价 · 公示≥20工作日</view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-primary btn-block" bindtap="onToggleForm">{{showForm ? '收起' : '+ 发起挂牌'}}</button>
+  </view>
+
+  <view class="card" wx:if="{{showForm}}">
+    <view class="card-title">挂牌申请</view>
+    <view class="form-group">
+      <text class="form-label">交易类型</text>
+      <picker mode="selector" range="{{typeOptions}}" range-key="label" bindchange="onTypeChange">
+        <view>{{typeOptions[typeIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">交易平台</text>
+      <picker mode="selector" range="{{platformOptions}}" range-key="label" bindchange="onPlatformChange">
+        <view>{{platformOptions[platformIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">评估价</text>
+      <input class="form-input" type="digit" data-field="appraisal_value" value="{{form.appraisal_value}}" bindinput="onInputChange" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">挂牌价</text>
+      <input class="form-input" type="digit" data-field="listing_price" value="{{form.listing_price}}" bindinput="onInputChange" placeholder="不得低于评估价" />
+    </view>
+    <view class="form-group" wx:if="{{form.transaction_type === 'lease'}}">
+      <text class="form-label">年租金</text>
+      <input class="form-input" type="digit" data-field="annual_rent" value="{{form.annual_rent}}" bindinput="onInputChange" placeholder="≥100万强制进场" />
+    </view>
+
+    <view class="check-result" wx:if="{{exchangeCheck}}">
+      <view class="check-row {{exchangeCheck.required ? 'pass' : 'fail'}}">
+        进场必要性：{{exchangeCheck.required ? '✓ ' + exchangeCheck.reason : '✗ ' + (exchangeCheck.reason || '未达阈值')}}
+      </view>
+    </view>
+    <view class="check-result" wx:if="{{priceCheck}}">
+      <view class="check-row {{priceCheck.passed ? 'pass' : 'fail'}}">
+        挂牌价校验：{{priceCheck.passed ? '✓ 通过' : '✗ ' + priceCheck.reason}}
+      </view>
+    </view>
+
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">提交挂牌</button>
+  </view>
+
+  <view class="card">
+    <view class="card-title">挂牌列表</view>
+    <empty-state wx:if="{{list.length === 0}}" text="暂无挂牌记录" icon="🏪" />
+    <view wx:else>
+      <view class="el-item" wx:for="{{list}}" wx:key="id">
+        <view class="el-header">
+          <view class="el-no">{{item.el_no}}</view>
+          <view class="tag tag-{{item.status === 'concluded' ? 'success' : (item.status === 'listing' ? 'info' : 'warning')}}">{{item.status}}</view>
+        </view>
+        <view class="el-meta">
+          <text>类型：{{item.transaction_type}}</text>
+          <text>平台：{{item.listing_platform}}</text>
+        </view>
+        <view class="el-meta">
+          <text>评估：¥{{item.appraisal_value}}</text>
+          <text class="text-primary">挂牌：¥{{item.listing_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

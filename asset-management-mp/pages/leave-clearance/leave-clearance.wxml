@@ -1,0 +1,35 @@
+<view class="lc-page">
+  <view class="page-header">
+    <view class="title">🚪 离职资产清收</view>
+    <view class="sub">59号制度M2 · 未完成清收离职流程锁定</view>
+  </view>
+
+  <view class="card soe-card-warning">
+    <view class="text-danger">⚠️ 离职流程锁定中</view>
+    <view class="text-muted" style="font-size:22rpx;margin-top:8rpx;">员工名下{{assetList.length}}项资产未清收,离职流程无法继续</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">名下资产清单</view>
+    <empty-state wx:if="{{assetList.length === 0}}" text="无未清收资产,可办离职" icon="✅" />
+    <view wx:else>
+      <view class="lc-item" wx:for="{{assetList}}" wx:key="id">
+        <view class="lc-info">
+          <view class="lc-name">{{item.asset_name}}</view>
+          <view class="lc-code">{{item.asset_code}} · ¥{{item.original_value}}</view>
+        </view>
+        <view class="lc-action" wx:if="{{item.action === 'pending'}}">
+          <view class="mini-btn text-info" data-id="{{item.id}}" bindtap="onReassign">内部分配</view>
+          <view class="mini-btn text-warning" data-id="{{item.id}}" bindtap="onReturn">退回综合部</view>
+        </view>
+        <view class="lc-action" wx:else>
+          <view class="tag tag-{{item.action === 'reassign' ? 'info' : 'success'}}">{{item.action === 'reassign' ? '待分配' : '已退回'}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="actions" wx:if="{{assetList.length > 0 && canConfirm}}">
+    <button class="btn btn-success btn-block" bindtap="onConfirmClear">综合部确认清收完成</button>
+  </view>
+</view>

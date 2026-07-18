@@ -1,0 +1,24 @@
+<view class="inventory-page">
+  <view class="page-header">
+    <view class="title">资产盘点</view>
+    <view class="sub">59号制度M5 · 三方协同+盘盈亏处理</view>
+  </view>
+  <view class="card">
+    <view class="card-title">盘点列表</view>
+    <empty-state wx:if="{{list.length === 0}}" text="暂无盘点记录" icon="📋" />
+    <view wx:else>
+      <view class="inv-item" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="onEnterScan">
+        <view class="inv-title">{{item.inv_no}}</view>
+        <view class="inv-meta">
+          <text>{{item.inv_type === 'annual_full' ? '年终大盘' : '不定期抽查'}}</text>
+          <text>{{item.start_date}}</text>
+          <text class="tag tag-info">{{item.status}}</text>
+        </view>
+        <view class="inv-progress">已扫码：{{item.scanned_assets.length || 0}} 项</view>
+      </view>
+    </view>
+  </view>
+  <view class="actions" wx:if="{{canInitiate}}">
+    <button class="btn btn-primary btn-block" bindtap="onCreate">+ 发起盘点</button>
+  </view>
+</view>

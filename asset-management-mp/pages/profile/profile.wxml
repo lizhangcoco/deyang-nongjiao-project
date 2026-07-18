@@ -1,0 +1,46 @@
+<view class="profile-page" wx:if="{{user}}">
+  <view class="user-header">
+    <view class="avatar">{{user.real_name ? user.real_name.charAt(0) : '?'}}</view>
+    <view class="info">
+      <view class="name">{{user.real_name}} <text class="soe-badge">SOE</text></view>
+      <view class="org">{{user.org_name}}</view>
+      <view class="dept">{{user.dept_name}}</view>
+      <view class="role">{{user.role_name}}</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">账号信息</view>
+    <view class="info-row"><text>手机号</text><text>{{user.phone}}</text></view>
+    <view class="info-row"><text>主体层级</text><text>{{user.org_id}}</text></view>
+    <view class="info-row"><text>账号状态</text><text class="text-success">在职</text></view>
+  </view>
+
+  <!-- 子公司制度备案审核 -->
+  <view class="card" wx:if="{{canAudit && policies.length > 0}}">
+    <view class="card-title">子公司制度备案审核</view>
+    <view class="policy-item" wx:for="{{policies}}" wx:key="id">
+      <view class="policy-name">{{item.policy_name}}</view>
+      <view class="policy-meta">
+        <text>提交：{{item.submit_date}}</text>
+        <view class="tag tag-{{item.audit_status === 'approved' ? 'success' : (item.audit_status === 'rejected' ? 'danger' : 'warning')}}">{{item.audit_status}}</view>
+      </view>
+      <view class="policy-actions" wx:if="{{item.audit_status === 'pending'}}">
+        <button class="btn btn-success" data-id="{{item.id}}" data-action="approve" bindtap="onAudit">通过</button>
+        <button class="btn btn-danger" data-id="{{item.id}}" data-action="reject" bindtap="onAudit">驳回</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">制度信息</view>
+    <view class="info-row"><text>现行制度</text><text class="text-primary">成农交【2026】59号</text></view>
+    <view class="info-row"><text>生效日期</text><text>2026年7月17日</text></view>
+    <view class="info-row"><text>废止制度</text><text class="text-muted">成农交〔2022〕92号</text></view>
+    <view class="info-row"><text>SOE合规版本</text><text class="text-success">已启用</text></view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-ghost btn-block" bindtap="onLogout">退出登录</button>
+  </view>
+</view>

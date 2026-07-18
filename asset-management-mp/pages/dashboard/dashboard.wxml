@@ -1,0 +1,95 @@
+<view class="dashboard">
+  <!-- 用户信息 -->
+  <view class="user-header">
+    <view class="user-info">
+      <view class="avatar">{{user.real_name ? user.real_name.charAt(0) : '?'}}</view>
+      <view class="info">
+        <view class="name">{{user.real_name}} <text class="soe-badge" wx:if="{{user.role_codes && user.role_codes.length}}">SOE</text></view>
+        <view class="org">{{user.org_name}} · {{user.dept_name}}</view>
+        <view class="role">{{user.role_name}}</view>
+      </view>
+    </view>
+    <view class="scan-btn" bindtap="onScanCode">
+      <text class="scan-icon">📷</text>
+      <text>扫码</text>
+    </view>
+  </view>
+
+  <!-- 资产统计 -->
+  <view class="stats-grid">
+    <view class="stat-item">
+      <view class="stat-value">{{stats.total}}</view>
+      <view class="stat-label">资产总数</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-value text-success">{{stats.in_use}}</view>
+      <view class="stat-label">在用</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-value text-warning">{{stats.idle}}</view>
+      <view class="stat-label">闲置</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-value text-info">{{stats.under_repair}}</view>
+      <view class="stat-label">维修中</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">资产价值概况</view>
+    <view class="value-row">
+      <text>资产原值合计</text>
+      <text class="text-primary">¥{{stats.total_value}}</text>
+    </view>
+    <view class="value-row">
+      <text>待报废</text>
+      <text class="text-warning">{{stats.pending_scrap}}</text>
+    </view>
+    <view class="value-row">
+      <text>已报废</text>
+      <text class="text-danger">{{stats.scrapped}}</text>
+    </view>
+  </view>
+
+  <!-- SOE逾期预警 -->
+  <view class="card" wx:if="{{overdueList.length > 0}}">
+    <view class="card-title text-danger">⚠️ 产权变动登记逾期预警</view>
+    <view class="warning-list">
+      <view class="warning-item" wx:for="{{overdueList}}" wx:key="id">
+        资产ID：{{item.asset_id}} 变动类型：{{item.change_type}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 待办审批 -->
+  <view class="card">
+    <view class="card-title" bindtap="onApprovalTap">
+      待办审批 <text class="more">查看全部 ></text>
+    </view>
+    <view wx:if="{{myApprovals.length === 0}}" class="empty-mini">暂无待办</view>
+    <view wx:else>
+      <view class="approval-item" wx:for="{{myApprovals}}" wx:key="id" bindtap="onApprovalTap">
+        <view class="approval-title">{{item.title}}</view>
+        <view class="approval-meta">
+          <text>{{item.initiator_name}}</text>
+          <text class="amount">¥{{item.amount}}</text>
+          <text class="time">{{item.start_time}}</text>
+        </view>
+        <view class="approval-step">当前节点：第{{item.current_step}}步</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="card">
+    <view class="card-title">业务功能</view>
+    <view class="menu-grid">
+      <view class="menu-item" wx:for="{{menus}}" wx:key="key" data-url="{{item.url}}" bindtap="onMenuTap">
+        <view class="menu-icon">{{item.icon}}</view>
+        <view class="menu-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="safe-bottom"></view>
+</view>

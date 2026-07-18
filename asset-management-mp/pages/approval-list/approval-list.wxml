@@ -1,0 +1,53 @@
+<view class="approval-page">
+  <view class="tabs">
+    <view class="tab {{tab === 'pending' ? 'active' : ''}}" data-tab="pending" bindtap="onTabChange">待办({{pendingList.length}})</view>
+    <view class="tab {{tab === 'initiated' ? 'active' : ''}}" data-tab="initiated" bindtap="onTabChange">我发起的</view>
+    <view class="tab {{tab === 'all' ? 'active' : ''}}" data-tab="all" bindtap="onTabChange" wx:if="{{allList.length}}">全部</view>
+  </view>
+
+  <block wx:if="{{tab === 'pending'}}">
+    <empty-state wx:if="{{pendingList.length === 0}}" text="暂无待办" icon="✅" />
+    <view class="approval-card" wx:for="{{pendingList}}" wx:key="id">
+      <view class="biz-type tag tag-primary">{{item.biz_type}}</view>
+      <view class="title">{{item.title}}</view>
+      <view class="meta">
+        <text>发起人：{{item.initiator_name}}</text>
+        <text class="amount">¥{{item.amount}}</text>
+      </view>
+      <view class="meta">
+        <text>{{item.start_time}}</text>
+        <text class="step">节点 {{item.current_step}}</text>
+      </view>
+      <view class="summary">{{item.summary}}</view>
+      <view class="actions">
+        <button class="btn btn-success" data-id="{{item.id}}" bindtap="onApprove">通过</button>
+        <button class="btn btn-danger" data-id="{{item.id}}" bindtap="onReject">驳回</button>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{tab === 'initiated'}}">
+    <empty-state wx:if="{{initiatedList.length === 0}}" text="暂无发起的审批" icon="📤" />
+    <view class="approval-card" wx:for="{{initiatedList}}" wx:key="id">
+      <view class="biz-type tag tag-primary">{{item.biz_type}}</view>
+      <view class="title">{{item.title}}</view>
+      <view class="meta">
+        <text>{{item.start_time}}</text>
+        <text class="status tag tag-{{item.status === 'approved' ? 'success' : (item.status === 'rejected' ? 'danger' : 'info')}}">{{item.status}}</text>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{tab === 'all'}}">
+    <view class="approval-card" wx:for="{{allList}}" wx:key="id">
+      <view class="biz-type tag tag-primary">{{item.biz_type}}</view>
+      <view class="title">{{item.title}}</view>
+      <view class="meta">
+        <text>{{item.initiator_name}}</text>
+        <text class="status tag tag-{{item.status === 'approved' ? 'success' : (item.status === 'rejected' ? 'danger' : 'info')}}">{{item.status}}</text>
+      </view>
+    </view>
+  </block>
+
+  <view class="safe-bottom"></view>
+</view>

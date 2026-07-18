@@ -1,0 +1,24 @@
+<view class="ai-page">
+  <view class="ai-header">
+    <view class="title">🤖 AI智能助手 <text class="soe-badge">AI</text></view>
+    <view class="sub">10项AI能力 · 自然语言交互 · 国资监管辅助</view>
+  </view>
+
+  <scroll-view scroll-y class="msg-list" scroll-into-view="msg-bottom">
+    <view class="msg {{item.role}}" wx:for="{{messages}}" wx:key="index">
+      <view class="bubble">{{item.content}}</view>
+    </view>
+    <view id="msg-bottom"></view>
+  </scroll-view>
+
+  <view class="quick-actions">
+    <scroll-view scroll-x>
+      <view class="quick-item" wx:for="{{quickActions}}" wx:key="*this" data-q="{{item}}" bindtap="onQuickAction">{{item}}</view>
+    </scroll-view>
+  </view>
+
+  <view class="input-bar">
+    <input class="input" placeholder="请输入问题..." value="{{inputValue}}" bindinput="onInput" bindconfirm="onSend" />
+    <button class="send-btn" bindtap="onSend">发送</button>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+.scan-page { padding-bottom: 40rpx; }
+.page-header { background: linear-gradient(135deg, #c0392b, #8e1c1c); padding: 40rpx 32rpx; color: #fff; }
+.page-header .title { font-size: 32rpx; font-weight: 600; }
+.page-header .sub { font-size: 22rpx; opacity: 0.85; margin-top: 8rpx; }
+.scan-action { padding: 24rpx; }
+.stats { display: flex; background: #fff; margin: 0 24rpx; border-radius: 12rpx; padding: 24rpx 0; }
+.stat { flex: 1; text-align: center; }
+.stat .num { display: block; font-size: 40rpx; font-weight: 600; }
+.stat .lbl { font-size: 22rpx; color: #95a5a6; }
+.empty-mini { text-align: center; padding: 30rpx; color: #95a5a6; font-size: 24rpx; }
+.asset-row { display: flex; align-items: center; justify-content: space-between; padding: 16rpx 0; border-bottom: 1rpx solid #ecf0f1; }
+.asset-row:last-child { border-bottom: none; }
+.asset-name { font-size: 26rpx; color: #2c3e50; }
+.asset-code { font-size: 22rpx; color: #95a5a6; }
+.asset-actions { display: flex; gap: 16rpx; }
+.mini-btn { padding: 8rpx 16rpx; border: 1rpx solid; border-radius: 6rpx; font-size: 22rpx; }
+.scanned-row { display: flex; justify-content: space-between; padding: 12rpx 0; font-size: 24rpx; border-bottom: 1rpx dashed #ecf0f1; }
+.scanned-row:last-child { border-bottom: none; }
+.actions { padding: 24rpx; }

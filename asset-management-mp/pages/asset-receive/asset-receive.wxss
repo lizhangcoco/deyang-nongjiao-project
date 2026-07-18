@@ -1,0 +1,10 @@
+.receive-page { padding-bottom: 40rpx; }
+.page-header { background: linear-gradient(135deg, #c0392b, #8e1c1c); padding: 40rpx 32rpx; color: #fff; }
+.page-header .title { font-size: 36rpx; font-weight: 600; }
+.page-header .sub { font-size: 22rpx; opacity: 0.85; margin-top: 8rpx; }
+.info-row { display: flex; justify-content: space-between; padding: 12rpx 0; font-size: 26rpx; border-bottom: 1rpx dashed #ecf0f1; }
+.info-row:last-child { border-bottom: none; }
+.info-row text:first-child { color: #7f8c8d; }
+.flow-steps { padding: 12rpx; background: #f5f6fa; border-radius: 8rpx; }
+.flow-step { padding: 6rpx 0; font-size: 24rpx; color: #34495e; }
+.actions { padding: 24rpx; }

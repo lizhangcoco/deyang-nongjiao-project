@@ -1,0 +1,47 @@
+.asset-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin: 16rpx 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.04);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+}
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2c3e50;
+  flex: 1;
+  margin-right: 16rpx;
+}
+.code {
+  font-size: 24rpx;
+  color: #95a5a6;
+  margin-bottom: 16rpx;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1rpx solid #ecf0f1;
+  padding-top: 16rpx;
+}
+.meta-item {
+  flex: 1;
+  text-align: center;
+}
+.meta-item .label {
+  display: block;
+  font-size: 22rpx;
+  color: #95a5a6;
+  margin-bottom: 4rpx;
+}
+.meta-item .value {
+  display: block;
+  font-size: 26rpx;
+  color: #2c3e50;
+  font-weight: 500;
+}

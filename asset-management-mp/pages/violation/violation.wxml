@@ -1,0 +1,66 @@
+<view class="v-page">
+  <view class="page-header">
+    <view class="title">⚠️ 违规追责 <text class="soe-badge">SOE</text></view>
+    <view class="sub">59号制度第五部分 · 5类违规+6类处置 · 绑定资产+责任人永久存档</view>
+  </view>
+
+  <view class="actions" wx:if="{{canRecord}}">
+    <button class="btn btn-primary btn-block" bindtap="onToggleForm">{{showForm ? '收起' : '+ 录入违规记录'}}</button>
+  </view>
+
+  <view class="card" wx:if="{{showForm}}">
+    <view class="card-title">违规信息</view>
+    <view class="form-group">
+      <text class="form-label">违规类型</text>
+      <picker mode="selector" range="{{violationOptions}}" range-key="label" bindchange="onViolationChange">
+        <view>{{violationOptions[violationIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">资产编号</text>
+      <input class="form-input" data-field="asset_id" value="{{form.asset_id}}" bindinput="onInputChange" placeholder="绑定资产(可选)" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">责任人</text>
+      <input class="form-input" data-field="responsible_user_name" value="{{form.responsible_user_name}}" bindinput="onInputChange" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">违规描述</text>
+      <textarea class="form-textarea" data-field="violation_desc" value="{{form.violation_desc}}" bindinput="onInputChange" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">处置类型</text>
+      <picker mode="selector" range="{{penaltyOptions}}" range-key="label" bindchange="onPenaltyChange">
+        <view>{{penaltyOptions[penaltyIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">处置说明</text>
+      <input class="form-input" data-field="penalty_detail" value="{{form.penalty_detail}}" bindinput="onInputChange" />
+    </view>
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">提交</button>
+  </view>
+
+  <view class="card">
+    <view class="card-title">追责记录</view>
+    <empty-state wx:if="{{list.length === 0}}" text="暂无追责记录" icon="⚠️" />
+    <view wx:else>
+      <view class="v-item" wx:for="{{list}}" wx:key="id">
+        <view class="v-header">
+          <view class="v-no">{{item.violation_no}}</view>
+          <view class="tag tag-{{item.status === 'closed' ? 'success' : 'warning'}}">{{item.status}}</view>
+        </view>
+        <view class="v-type text-danger">{{item.violation_label}}</view>
+        <view class="v-desc">{{item.violation_desc}}</view>
+        <view class="v-meta">
+          <text>责任人：{{item.responsible_user_name}}</text>
+          <text>资产：{{item.asset_id || '无'}}</text>
+        </view>
+        <view class="v-meta">
+          <text class="text-warning">处置：{{item.penalty_label}}</text>
+          <text class="text-muted">{{item.archive_date}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="asset-list-page">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <view class="search-input">
+      <text class="icon">🔍</text>
+      <input type="text" placeholder="搜索资产名称/编号" value="{{keyword}}" bindinput="onSearchInput" bindconfirm="onSearch" />
+      <view class="scan" bindtap="onScanCode">📷</view>
+    </view>
+  </view>
+
+  <!-- 分类Tab -->
+  <view class="tabs">
+    <view class="tab {{activeCategory === item.value ? 'active' : ''}}" wx:for="{{categoryTabs}}" wx:key="value" data-value="{{item.value}}" bindtap="onCategoryTap">
+      {{item.label}}
+    </view>
+  </view>
+
+  <!-- 状态筛选 -->
+  <view class="filter-row">
+    <picker mode="selector" range="{{statusOptions}}" range-key="label" bindchange="onStatusChange">
+      <view class="filter-btn {{activeStatus ? 'active' : ''}}">
+        {{activeStatus ? statusOptions[0].label : '全部状态'}} ▼
+      </view>
+    </picker>
+    <view class="add-btn" bindtap="onAdd">+ 入库</view>
+  </view>
+
+  <!-- 资产列表 -->
+  <view wx:if="{{list.length === 0 && !loading}}">
+    <empty-state text="暂无资产数据" icon="📦" />
+  </view>
+  <view wx:else>
+    <asset-card wx:for="{{list}}" wx:key="id" asset="{{item}}" bind:tap="onAssetTap" />
+  </view>
+
+  <view class="safe-bottom"></view>
+</view>

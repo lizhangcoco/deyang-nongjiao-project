@@ -1,0 +1,22 @@
+<view class="archive-page">
+  <view class="page-header">
+    <view class="title">📁 档案中心 <text class="soe-badge">SOE</text></view>
+    <view class="sub">16类台账档案永久存储 · 多条件检索 · Excel导出 · 区块链存证</view>
+  </view>
+
+  <view class="archive-grid">
+    <view class="archive-item" wx:for="{{archives}}" wx:key="key" data-key="{{item.key}}" bindtap="onTap">
+      <view class="archive-icon">{{item.icon}}</view>
+      <view class="archive-name">{{item.name}}</view>
+      <view class="archive-count">{{item.count}} 条</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">SOE档案存证说明</view>
+    <view class="info-row"><text>区块链存证</text><text class="text-success">✓ 已启用</text></view>
+    <view class="info-row"><text>SM4加密存储</text><text class="text-success">✓ 已启用</text></view>
+    <view class="info-row"><text>永久归档</text><text class="text-success">✓ 不可删除</text></view>
+    <view class="info-row"><text>电子签名</text><text class="text-success">✓ SM2+CA</text></view>
+  </view>
+</view>

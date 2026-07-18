@@ -1,0 +1,21 @@
+<view class="asset-card" bindtap="onTap">
+  <view class="header">
+    <view class="name">{{asset.asset_name}}</view>
+    <status-tag wx:if="{{showStatus}}" status="{{asset.status}}" />
+  </view>
+  <view class="code">编号：{{asset.asset_code}}</view>
+  <view class="meta">
+    <view class="meta-item">
+      <text class="label">原值</text>
+      <text class="value">¥{{asset.original_value}}</text>
+    </view>
+    <view class="meta-item">
+      <text class="label">归口</text>
+      <text class="value">{{asset.manage_dept_role}}</text>
+    </view>
+    <view class="meta-item">
+      <text class="label">使用人</text>
+      <text class="value">{{asset.use_user_id || '公共'}}</text>
+    </view>
+  </view>
+</view>

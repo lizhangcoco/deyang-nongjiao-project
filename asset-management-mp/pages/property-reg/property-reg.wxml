@@ -1,0 +1,40 @@
+<view class="pr-page">
+  <view class="page-header">
+    <view class="title">🏛️ 产权登记 <text class="soe-badge">SOE</text></view>
+    <view class="sub">国资委32号令 · 占有/变动/注销登记 · 30日内办理</view>
+  </view>
+
+  <view class="card" wx:if="{{overdueList.length > 0}}">
+    <view class="card-title text-danger">⚠️ 逾期未办理变动登记 ({{overdueList.length}})</view>
+    <view class="overdue-item" wx:for="{{overdueList}}" wx:key="id">
+      <view>资产：{{item.asset_id}} | 变动：{{item.change_type}}</view>
+      <view class="text-danger" style="font-size:22rpx;">已逾期,后续业务已锁定</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">产权登记记录</view>
+    <empty-state wx:if="{{list.length === 0}}" text="暂无登记记录" icon="🏛️" />
+    <view wx:else>
+      <view class="pr-item" wx:for="{{list}}" wx:key="id">
+        <view class="pr-header">
+          <view class="pr-no">{{item.pr_no}}</view>
+          <view class="tag tag-{{item.status === 'registered' ? 'success' : 'warning'}}">{{item.status}}</view>
+        </view>
+        <view class="pr-meta">
+          <text>类型：{{item.reg_type_label}}</text>
+          <text>资产：{{item.asset_id}}</text>
+        </view>
+        <view class="pr-meta" wx:if="{{item.sasac_filing_no}}">
+          <text>备案号：{{item.sasac_filing_no}}</text>
+          <text>{{item.sasac_filing_date}}</text>
+        </view>
+        <view class="pr-action" wx:if="{{item.status !== 'registered'}}" data-id="{{item.id}}" bindtap="onRegister">
+          办理登记 →
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="safe-bottom"></view>
+</view>

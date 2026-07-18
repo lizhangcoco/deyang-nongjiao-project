@@ -1,0 +1,12 @@
+.lc-page { padding-bottom: 40rpx; }
+.page-header { background: linear-gradient(135deg, #c0392b, #8e1c1c); padding: 40rpx 32rpx; color: #fff; }
+.page-header .title { font-size: 36rpx; font-weight: 600; }
+.page-header .sub { font-size: 22rpx; opacity: 0.85; margin-top: 8rpx; }
+.soe-card-warning { border-left: 6rpx solid #e74c3c; }
+.lc-item { display: flex; align-items: center; justify-content: space-between; padding: 16rpx 0; border-bottom: 1rpx solid #ecf0f1; }
+.lc-item:last-child { border-bottom: none; }
+.lc-name { font-size: 26rpx; color: #2c3e50; font-weight: 500; }
+.lc-code { font-size: 22rpx; color: #95a5a6; margin-top: 4rpx; }
+.lc-action { display: flex; gap: 12rpx; }
+.mini-btn { padding: 8rpx 16rpx; border: 1rpx solid; border-radius: 6rpx; font-size: 22rpx; }
+.actions { padding: 24rpx; }

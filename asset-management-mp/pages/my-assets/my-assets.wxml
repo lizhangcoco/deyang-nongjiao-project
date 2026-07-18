@@ -1,0 +1,38 @@
+<view class="my-page">
+  <view class="user-header">
+    <view class="avatar">{{user.real_name ? user.real_name.charAt(0) : '?'}}</view>
+    <view class="info">
+      <view class="name">{{user.real_name}}</view>
+      <view class="org">{{user.org_name}}</view>
+      <view class="role">{{user.role_name}}</view>
+    </view>
+    <view class="logout" bindtap="onLogout">退出</view>
+  </view>
+
+  <view class="stats-grid">
+    <view class="stat">
+      <view class="num">{{stats.total}}</view>
+      <view class="lbl">资产总数</view>
+    </view>
+    <view class="stat">
+      <view class="num text-success">{{stats.in_use}}</view>
+      <view class="lbl">在用</view>
+    </view>
+    <view class="stat">
+      <view class="num text-warning">{{stats.idle}}</view>
+      <view class="lbl">闲置</view>
+    </view>
+  </view>
+
+  <view class="quick-menu">
+    <view class="menu-item" bindtap="onLogout">
+      <text class="icon">🚪</text><text>退出登录</text>
+    </view>
+  </view>
+
+  <view class="section-title">我的名下资产</view>
+  <empty-state wx:if="{{list.length === 0}}" text="暂无名下资产" icon="📦" />
+  <asset-card wx:for="{{list}}" wx:key="id" asset="{{item}}" bind:tap="onAssetTap" />
+
+  <view class="safe-bottom"></view>
+</view>

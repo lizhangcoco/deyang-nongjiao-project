@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/dashboard/dashboard",
+    "pages/asset-list/asset-list",
+    "pages/asset-detail/asset-detail",
+    "pages/asset-inbound/asset-inbound",
+    "pages/asset-scrap/asset-scrap",
+    "pages/asset-receive/asset-receive",
+    "pages/asset-transfer/asset-transfer",
+    "pages/inventory/inventory",
+    "pages/inventory-scan/inventory-scan",
+    "pages/approval-list/approval-list",
+    "pages/major-decision/major-decision",
+    "pages/property-reg/property-reg",
+    "pages/appraisal/appraisal",
+    "pages/exchange/exchange",
+    "pages/sasac-report/sasac-report",
+    "pages/my-assets/my-assets",
+    "pages/leave-clearance/leave-clearance",
+    "pages/ai-assistant/ai-assistant",
+    "pages/archive/archive",
+    "pages/violation/violation",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#c0392b",
+    "navigationBarTitleText": "成都农交所资产管理",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6fa"
+  },
+  "tabBar": {
+    "color": "#7f8c8d",
+    "selectedColor": "#c0392b",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/dashboard/dashboard",
+        "text": "工作台",
+        "iconPath": "assets/tab/home.png",
+        "selectedIconPath": "assets/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/asset-list/asset-list",
+        "text": "资产台账",
+        "iconPath": "assets/tab/list.png",
+        "selectedIconPath": "assets/tab/list-active.png"
+      },
+      {
+        "pagePath": "pages/approval-list/approval-list",
+        "text": "审批",
+        "iconPath": "assets/tab/approval.png",
+        "selectedIconPath": "assets/tab/approval-active.png"
+      },
+      {
+        "pagePath": "pages/my-assets/my-assets",
+        "text": "我的",
+        "iconPath": "assets/tab/me.png",
+        "selectedIconPath": "assets/tab/me-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于资产存放地点定位"
+    }
+  },
+  "requiredPrivateInfos": ["chooseLocation"],
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

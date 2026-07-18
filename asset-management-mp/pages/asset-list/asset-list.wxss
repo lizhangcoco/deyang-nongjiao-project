@@ -1,0 +1,70 @@
+.asset-list-page { padding-bottom: 40rpx; }
+.search-bar {
+  background: #fff;
+  padding: 16rpx 24rpx;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.search-input {
+  display: flex;
+  align-items: center;
+  background: #f5f6fa;
+  border-radius: 30rpx;
+  padding: 12rpx 24rpx;
+}
+.search-input .icon { font-size: 28rpx; margin-right: 12rpx; }
+.search-input input { flex: 1; font-size: 26rpx; }
+.search-input .scan { font-size: 36rpx; }
+
+.tabs {
+  display: flex;
+  background: #fff;
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid #ecf0f1;
+}
+.tab {
+  padding: 20rpx 32rpx;
+  font-size: 26rpx;
+  color: #7f8c8d;
+  position: relative;
+}
+.tab.active {
+  color: #c0392b;
+  font-weight: 600;
+}
+.tab.active::after {
+  content: '';
+  position: absolute;
+  left: 32rpx;
+  right: 32rpx;
+  bottom: 0;
+  height: 4rpx;
+  background: #c0392b;
+}
+
+.filter-row {
+  display: flex;
+  padding: 16rpx 24rpx;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-btn {
+  padding: 8rpx 24rpx;
+  background: #f5f6fa;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: #34495e;
+}
+.filter-btn.active {
+  background: #fdecea;
+  color: #c0392b;
+}
+.add-btn {
+  padding: 8rpx 24rpx;
+  background: #c0392b;
+  color: #fff;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}

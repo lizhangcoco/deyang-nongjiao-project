@@ -1,0 +1,46 @@
+<view class="scan-page" wx:if="{{inv}}">
+  <view class="page-header">
+    <view class="title">{{inv.inv_no}}</view>
+    <view class="sub">{{inv.inv_type === 'annual_full' ? '年终全资产大盘' : '不定期抽查'}} · AI辅助识别</view>
+  </view>
+
+  <view class="scan-action">
+    <button class="btn btn-primary btn-block" bindtap="onScan">📷 扫码/拍照识别资产</button>
+  </view>
+
+  <view class="stats">
+    <view class="stat"><text class="num text-success">{{scannedList.length}}</text><text class="lbl">已盘点</text></view>
+    <view class="stat"><text class="num text-warning">{{notScannedAssets.length}}</text><text class="lbl">待盘点</text></view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">待盘点资产</view>
+    <view wx:if="{{notScannedAssets.length === 0}}" class="empty-mini">全部盘点完成 🎉</view>
+    <view wx:else>
+      <view class="asset-row" wx:for="{{notScannedAssets}}" wx:key="id">
+        <view class="asset-info">
+          <view class="asset-name">{{item.asset_name}}</view>
+          <view class="asset-code">{{item.asset_code}}</view>
+        </view>
+        <view class="asset-actions">
+          <view class="mini-btn text-warning" data-id="{{item.id}}" bindtap="onMarkShortage">盘亏</view>
+          <view class="mini-btn text-danger" data-id="{{item.id}}" bindtap="onMarkDamage">毁损</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{scannedList.length > 0}}">
+    <view class="card-title">已盘点记录</view>
+    <view class="scanned-row" wx:for="{{scannedList}}" wx:key="asset_id">
+      <text>{{item.asset_id}}</text>
+      <text class="tag tag-{{item.diff_type === 'surplus' ? 'success' : (item.diff_type === 'shortage' ? 'warning' : (item.diff_type === 'damage' ? 'danger' : 'default'))}}">
+        {{item.diff_type ? item.diff_type : '正常'}}
+      </text>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-success btn-block" bindtap="onComplete">完成盘点</button>
+  </view>
+</view>

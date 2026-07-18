@@ -1,0 +1,25 @@
+.approval-page { padding-bottom: 40rpx; }
+.tabs { display: flex; background: #fff; border-bottom: 1rpx solid #ecf0f1; }
+.tab { flex: 1; text-align: center; padding: 24rpx 0; font-size: 26rpx; color: #7f8c8d; }
+.tab.active { color: #c0392b; font-weight: 600; border-bottom: 4rpx solid #c0392b; }
+.approval-card {
+  background: #fff;
+  margin: 16rpx 24rpx;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.04);
+}
+.biz-type { margin-bottom: 12rpx; }
+.title { font-size: 30rpx; font-weight: 600; color: #2c3e50; margin-bottom: 12rpx; }
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #95a5a6;
+  margin-bottom: 8rpx;
+}
+.meta .amount { color: #c0392b; }
+.meta .step { color: #3498db; }
+.summary { font-size: 24rpx; color: #34495e; padding: 12rpx; background: #f5f6fa; border-radius: 8rpx; margin-top: 8rpx; }
+.actions { display: flex; gap: 16rpx; margin-top: 16rpx; }
+.actions .btn { flex: 1; }

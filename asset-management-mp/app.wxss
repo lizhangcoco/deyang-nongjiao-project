@@ -1,0 +1,158 @@
+/* app.wxss - 全局样式 */
+page {
+  background: #f5f6fa;
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft YaHei", sans-serif;
+  font-size: 28rpx;
+  color: #2c3e50;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+view, text, input, textarea, button, scroll-view, picker, image, swiper, swiper-item {
+  box-sizing: border-box;
+}
+
+/* 主色 - 国企红 */
+.text-primary { color: #c0392b; }
+.bg-primary { background: #c0392b; }
+.text-success { color: #27ae60; }
+.text-warning { color: #f39c12; }
+.text-danger { color: #e74c3c; }
+.text-info { color: #3498db; }
+.text-muted { color: #95a5a6; }
+
+/* 卡片 */
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin: 20rpx 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.04);
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16rpx;
+  display: flex;
+  align-items: center;
+}
+
+.card-title::before {
+  content: '';
+  width: 8rpx;
+  height: 32rpx;
+  background: #c0392b;
+  border-radius: 4rpx;
+  margin-right: 16rpx;
+}
+
+/* 按钮 */
+.btn {
+  display: inline-block;
+  padding: 20rpx 40rpx;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  text-align: center;
+  border: none;
+  line-height: 1;
+}
+
+.btn-primary { background: #c0392b; color: #fff; }
+.btn-success { background: #27ae60; color: #fff; }
+.btn-warning { background: #f39c12; color: #fff; }
+.btn-danger { background: #e74c3c; color: #fff; }
+.btn-info { background: #3498db; color: #fff; }
+.btn-ghost { background: #fff; color: #c0392b; border: 2rpx solid #c0392b; }
+.btn-block { display: block; width: 100%; }
+.btn[disabled] { opacity: 0.5; }
+
+/* 表单 */
+.form-group {
+  padding: 20rpx 24rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ecf0f1;
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  width: 200rpx;
+  font-size: 28rpx;
+  color: #34495e;
+}
+
+.form-input, .form-picker {
+  flex: 1;
+  font-size: 28rpx;
+  color: #2c3e50;
+}
+
+.form-textarea {
+  flex: 1;
+  font-size: 28rpx;
+  min-height: 120rpx;
+}
+
+/* 标签 */
+.tag {
+  display: inline-block;
+  padding: 4rpx 16rpx;
+  border-radius: 8rpx;
+  font-size: 22rpx;
+  margin-right: 8rpx;
+}
+
+.tag-default { background: #ecf0f1; color: #7f8c8d; }
+.tag-primary { background: #fdecea; color: #c0392b; }
+.tag-success { background: #e8f8f0; color: #27ae60; }
+.tag-warning { background: #fef5e7; color: #f39c12; }
+.tag-danger { background: #fdedec; color: #e74c3c; }
+.tag-info { background: #ebf5fb; color: #3498db; }
+
+/* 列表 */
+.list-item {
+  background: #fff;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 空状态 */
+.empty {
+  text-align: center;
+  padding: 80rpx 0;
+  color: #95a5a6;
+}
+
+/* 滚动区域 */
+.scroll-container {
+  height: 100vh;
+}
+
+/* 分隔标题 */
+.section-title {
+  padding: 20rpx 24rpx 10rpx;
+  font-size: 26rpx;
+  color: #95a5a6;
+  font-weight: 500;
+}
+
+/* SOE合规徽章 */
+.soe-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4rpx 12rpx;
+  background: linear-gradient(135deg, #c0392b, #8e1c1c);
+  color: #fff;
+  border-radius: 6rpx;
+  font-size: 20rpx;
+  margin-left: 8rpx;
+}
+
+/* 顶部留白 */
+.safe-top { padding-top: 20rpx; }
+.safe-bottom { padding-bottom: 40rpx; }

@@ -1,0 +1,31 @@
+<view class="transfer-page" wx:if="{{asset}}">
+  <view class="page-header">
+    <view class="title">资产调拨申请</view>
+    <view class="sub">59号制度M2 · 双方确认+归口审批</view>
+  </view>
+  <view class="card">
+    <view class="card-title">调拨资产</view>
+    <view class="info-row"><text>资产编号</text><text>{{asset.asset_code}}</text></view>
+    <view class="info-row"><text>资产名称</text><text>{{asset.asset_name}}</text></view>
+    <view class="info-row"><text>当前使用部门</text><text>{{asset.use_dept_id}}</text></view>
+  </view>
+  <view class="card">
+    <view class="card-title">调拨信息</view>
+    <view class="form-group">
+      <text class="form-label">调拨范围</text>
+      <radio-group bindchange="onScopeChange">
+        <label class="radio"><radio value="internal" checked="{{scope === 'internal'}}" color="#c0392b" />内部部门</label>
+        <label class="radio"><radio value="cross_branch" color="#c0392b" />跨分公司</label>
+      </radio-group>
+    </view>
+    <view class="form-group">
+      <text class="form-label">调入部门</text>
+      <picker mode="selector" range="{{deptOptions}}" range-key="dept_name" bindchange="onDeptChange">
+        <view>{{deptIndex >= 0 ? deptOptions[deptIndex].dept_name : '请选择'}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="actions">
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">提交调拨申请</button>
+  </view>
+</view>

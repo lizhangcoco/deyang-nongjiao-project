@@ -1,0 +1,65 @@
+<view class="appraisal-page">
+  <view class="page-header">
+    <view class="title">💯 资产评估 <text class="soe-badge">SOE</text></view>
+    <view class="sub">国资委12号令 · 账面净值≥10万强制评估 · 报国资委备案</view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-primary btn-block" bindtap="onToggleForm">{{showForm ? '收起' : '+ 发起评估'}}</button>
+  </view>
+
+  <view class="card" wx:if="{{showForm}}">
+    <view class="card-title">评估申请</view>
+    <view class="form-group">
+      <text class="form-label">评估机构</text>
+      <picker mode="selector" range="{{orgs}}" range-key="org_name" bindchange="onOrgChange">
+        <view>{{orgs.length > 0 ? orgs[orgIndex].org_name : '请选择'}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">评估目的</text>
+      <picker mode="selector" range="{{purposeOptions}}" range-key="label" bindchange="onPurposeChange">
+        <view>{{purposeOptions[purposeIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">评估方法</text>
+      <picker mode="selector" range="{{methodOptions}}" range-key="label" bindchange="onMethodChange">
+        <view>{{methodOptions[methodIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">基准日</text>
+      <picker mode="date" data-field="appraisal_base_date" bindchange="onInputChange">
+        <view>{{form.appraisal_base_date || '请选择'}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">账面价值</text>
+      <input class="form-input" type="digit" data-field="book_value" value="{{form.book_value}}" bindinput="onInputChange" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">评估价值</text>
+      <input class="form-input" type="digit" data-field="appraisal_value" value="{{form.appraisal_value}}" bindinput="onInputChange" />
+    </view>
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">生成评估报告</button>
+  </view>
+
+  <view class="card">
+    <view class="card-title">评估报告列表</view>
+    <empty-state wx:if="{{list.length === 0}}" text="暂无评估报告" icon="💯" />
+    <view wx:else>
+      <view class="ar-item" wx:for="{{list}}" wx:key="id">
+        <view class="ar-no">{{item.ar_no}}</view>
+        <view class="ar-meta">
+          <text>账面：¥{{item.book_value}}</text>
+          <text class="text-primary">评估：¥{{item.appraisal_value}}</text>
+        </view>
+        <view class="ar-meta">
+          <text>增值率：{{item.appraisal_premium_rate}}%</text>
+          <view class="tag tag-{{item.filing_status === 'filed' ? 'success' : 'warning'}}">{{item.filing_status}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+.appraisal-page { padding-bottom: 40rpx; }
+.page-header { background: linear-gradient(135deg, #c0392b, #8e1c1c); padding: 40rpx 32rpx; color: #fff; }
+.page-header .title { font-size: 36rpx; font-weight: 600; }
+.page-header .sub { font-size: 22rpx; opacity: 0.85; margin-top: 8rpx; }
+.actions { padding: 24rpx; }
+.ar-item { padding: 16rpx 0; border-bottom: 1rpx solid #ecf0f1; }
+.ar-item:last-child { border-bottom: none; }
+.ar-no { font-size: 24rpx; color: #95a5a6; margin-bottom: 8rpx; }
+.ar-meta { display: flex; justify-content: space-between; font-size: 24rpx; color: #34495e; margin-bottom: 4rpx; }

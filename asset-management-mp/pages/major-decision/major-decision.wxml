@@ -1,0 +1,59 @@
+<view class="md-page">
+  <view class="page-header">
+    <view class="title">⚖️ 三重一大决策 <text class="soe-badge">SOE</text></view>
+    <view class="sub">中纪发〔2010〕3号 · 党委会前置+集体决策+录音录像+区块链存证</view>
+  </view>
+
+  <view class="card" wx:if="{{autoTrigger && autoTrigger.is_major_decision}}">
+    <view class="card-title text-danger">⚠️ AI自动识别触发</view>
+    <view class="text-danger">触发条件：{{autoTrigger.triggers}}</view>
+    <view class="text-muted" style="font-size:22rpx;margin-top:8rpx;">本业务必须先完成三重一大决策程序方可继续</view>
+  </view>
+
+  <view class="actions" wx:if="{{canCreate}}">
+    <button class="btn btn-primary btn-block" bindtap="onToggleForm">{{showForm ? '收起' : '+ 发起三重一大决策'}}</button>
+  </view>
+
+  <view class="card" wx:if="{{showForm}}">
+    <view class="card-title">发起决策</view>
+    <view class="form-group">
+      <text class="form-label">业务类型</text>
+      <picker mode="selector" range="{{bizTypeOptions}}" range-key="label" bindchange="onBizTypeChange">
+        <view>{{bizTypeOptions[bizTypeIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">涉及金额</text>
+      <input class="form-input" type="digit" data-field="amount" value="{{form.amount}}" bindinput="onInputChange" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">决策标题</text>
+      <input class="form-input" data-field="title" value="{{form.title}}" bindinput="onInputChange" />
+    </view>
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">提交</button>
+  </view>
+
+  <view class="card">
+    <view class="card-title">决策事项列表</view>
+    <empty-state wx:if="{{list.length === 0}}" text="暂无决策事项" icon="⚖️" />
+    <view wx:else>
+      <view class="md-item" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="onProcess">
+        <view class="md-header">
+          <view class="md-no">{{item.md_no}}</view>
+          <view class="tag tag-{{item.status === 'approved' ? 'success' : (item.status === 'rejected' ? 'danger' : 'warning')}}">{{item.status}}</view>
+        </view>
+        <view class="md-title">{{item.title}}</view>
+        <view class="md-meta">
+          <text>{{item.biz_type_label}}</text>
+          <text class="amount">¥{{item.amount}}</text>
+        </view>
+        <view class="md-trigger">触发：{{item.trigger_rule}}</view>
+        <view class="md-process" wx:if="{{item.status !== 'approved' && item.status !== 'rejected'}}">
+          点击推进流程 →
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="safe-bottom"></view>
+</view>

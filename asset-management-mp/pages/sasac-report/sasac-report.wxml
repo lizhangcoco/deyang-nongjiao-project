@@ -1,0 +1,74 @@
+<view class="sr-page">
+  <view class="page-header">
+    <view class="title">📊 国资监管报送 <text class="soe-badge">SOE</text></view>
+    <view class="sub">企业国资法 · 月/季/年报+重大事项24h内 · 保值增值核算</view>
+  </view>
+
+  <!-- KPI看板 -->
+  <view class="card" wx:if="{{kpi}}">
+    <view class="card-title">🤖 AI保值增值分析 <text class="soe-badge">AI-10</text></view>
+    <view class="kpi-grid">
+      <view class="kpi-item">
+        <view class="kpi-num text-primary">{{kpi.total_assets}}</view>
+        <view class="kpi-lbl">资产总数</view>
+      </view>
+      <view class="kpi-item">
+        <view class="kpi-num">{{kpi.total_value}}</view>
+        <view class="kpi-lbl">原值合计</view>
+      </view>
+      <view class="kpi-item">
+        <view class="kpi-num text-success">{{kpi.utilization_rate}}%</view>
+        <view class="kpi-lbl">利用率</view>
+      </view>
+      <view class="kpi-item">
+        <view class="kpi-num text-warning">{{kpi.idle_rate}}%</view>
+        <view class="kpi-lbl">闲置率</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-primary btn-block" bindtap="onToggleForm">{{showForm ? '收起' : '+ 生成报告'}}</button>
+  </view>
+
+  <view class="card" wx:if="{{showForm}}">
+    <view class="card-title">生成报送</view>
+    <view class="form-group">
+      <text class="form-label">报告类型</text>
+      <picker mode="selector" range="{{reportTypeOptions}}" range-key="label" bindchange="onTypeChange">
+        <view>{{reportTypeOptions[reportTypeIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">报告期</text>
+      <input class="form-input" placeholder="如 2026-07 / 2026-Q3 / 2026" data-field="report_period" value="{{form.report_period}}" bindinput="onInputChange" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">报告内容</text>
+      <textarea class="form-textarea" data-field="content" value="{{form.content}}" bindinput="onInputChange" />
+    </view>
+    <button class="btn btn-info btn-block" bindtap="onAutoGenerate" style="margin-bottom:16rpx;">🤖 AI自动生成</button>
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">提交</button>
+  </view>
+
+  <view class="card">
+    <view class="card-title">报送记录</view>
+    <empty-state wx:if="{{list.length === 0}}" text="暂无报送记录" icon="📊" />
+    <view wx:else>
+      <view class="sr-item" wx:for="{{list}}" wx:key="id">
+        <view class="sr-header">
+          <view class="sr-no">{{item.report_no}}</view>
+          <view class="tag tag-{{item.status === 'acknowledged' ? 'success' : (item.status === 'submitted' ? 'info' : 'warning')}}">{{item.status}}</view>
+        </view>
+        <view class="sr-meta">
+          <text>{{item.type_label}}</text>
+          <text>{{item.report_period}}</text>
+        </view>
+        <view class="sr-meta" wx:if="{{item.sasac_receipt_no}}">
+          <text>回执：{{item.sasac_receipt_no}}</text>
+          <text class="text-success">✓</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

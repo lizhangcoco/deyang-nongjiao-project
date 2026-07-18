@@ -1,0 +1,57 @@
+.my-page { padding-bottom: 40rpx; }
+.user-header {
+  background: linear-gradient(135deg, #c0392b, #8e1c1c);
+  padding: 60rpx 32rpx;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56rpx;
+  font-weight: 600;
+  margin-right: 24rpx;
+}
+.info { flex: 1; }
+.info .name { font-size: 36rpx; font-weight: 600; }
+.info .org { font-size: 24rpx; opacity: 0.85; margin-top: 6rpx; }
+.info .role { font-size: 22rpx; opacity: 0.7; margin-top: 4rpx; }
+.logout {
+  padding: 12rpx 24rpx;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+.stats-grid {
+  display: flex;
+  background: #fff;
+  margin: -20rpx 24rpx 0;
+  border-radius: 16rpx;
+  padding: 24rpx 0;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 1;
+}
+.stat { flex: 1; text-align: center; border-right: 1rpx solid #ecf0f1; }
+.stat:last-child { border-right: none; }
+.stat .num { font-size: 40rpx; font-weight: 600; }
+.stat .lbl { font-size: 22rpx; color: #95a5a6; margin-top: 8rpx; }
+.quick-menu {
+  background: #fff;
+  margin: 24rpx;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+.quick-menu .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  font-size: 26rpx;
+}
+.quick-menu .icon { margin-right: 16rpx; }

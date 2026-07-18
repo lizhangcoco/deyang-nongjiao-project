@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "产权登记",
+  "usingComponents": { "empty-state": "/components/empty-state/empty-state" }
+}

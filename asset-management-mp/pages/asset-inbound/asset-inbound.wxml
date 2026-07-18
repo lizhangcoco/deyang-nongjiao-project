@@ -1,0 +1,93 @@
+<view class="inbound-page">
+  <view class="page-header">
+    <view class="title">资产入库申请</view>
+    <view class="sub">59号制度3.1-3.4条 · AI辅助判定</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">基础信息</view>
+    <view class="form-group">
+      <text class="form-label">资产名称</text>
+      <input class="form-input" placeholder="必填" data-field="asset_name" value="{{form.asset_name}}" bindinput="onInput" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">资产分类</text>
+      <picker class="form-picker" mode="selector" range="{{categoryOptions}}" range-key="label" bindchange="onCategoryChange">
+        <view class="{{categoryIndex >= 0 ? '' : 'placeholder'}}">{{categoryIndex >= 0 ? categoryOptions[categoryIndex].label : '请选择'}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">单价(元)</text>
+      <input class="form-input" type="digit" placeholder="必填,触发AI判定" data-field="unit_price" value="{{form.unit_price}}" bindinput="onInput" bindblur="onPriceBlur" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">数量</text>
+      <input class="form-input" type="number" data-field="quantity" value="{{form.quantity}}" bindinput="onInput" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">使用年限</text>
+      <input class="form-input" type="number" placeholder="年" data-field="useful_life_years" value="{{form.useful_life_years}}" bindinput="onInput" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">大批量长期</text>
+      <switch checked="{{form.is_batch_long_term}}" bindchange="onBatchChange" color="#c0392b" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">存放地点</text>
+      <input class="form-input" placeholder="必填" data-field="location" value="{{form.location}}" bindinput="onInput" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">供应商</text>
+      <input class="form-input" data-field="supplier" value="{{form.supplier}}" bindinput="onInput" />
+    </view>
+  </view>
+
+  <!-- AI判定结果 -->
+  <view class="card ai-card" wx:if="{{judgeResult}}">
+    <view class="card-title">🤖 AI资产自动判定 <text class="soe-badge">AI-1</text></view>
+    <view class="ai-result">
+      <view class="ai-row"><text>资产类型</text><text class="text-primary">{{judgeResult.asset_type_label}}</text></view>
+      <view class="ai-row"><text>一级分类</text><text>{{judgeResult.category_l1}}</text></view>
+      <view class="ai-row"><text>二级分类</text><text>{{judgeResult.category_l2_label}}</text></view>
+      <view class="ai-row"><text>归口部门</text><text class="text-primary">{{judgeResult.manage_dept_label}}</text></view>
+      <view class="ai-row"><text>原值合计</text><text class="text-primary">¥{{judgeResult.original_value}}</text></view>
+      <view class="ai-row" wx:if="{{judgeResult.is_high_value}}"><text>高价值资产</text><text class="text-warning">是(三级审签)</text></view>
+    </view>
+  </view>
+
+  <!-- AI预算预警 -->
+  <view class="card" wx:if="{{budgetCheck}}">
+    <view class="card-title">🤖 AI预算预警 <text class="soe-badge">AI-6</text></view>
+    <view class="ai-row" wx:if="{{budgetCheck.passed}}">
+      <text>预算校验</text><text class="text-success">通过(剩余¥{{budgetCheck.remaining}})</text>
+    </view>
+    <view class="ai-warning" wx:else>
+      <text class="text-danger">⚠️ {{budgetCheck.reason}}</text>
+    </view>
+  </view>
+
+  <!-- AI审批流匹配 -->
+  <view class="card" wx:if="{{flowMatch}}">
+    <view class="card-title">🤖 AI审批流自动匹配 <text class="soe-badge">AI-2</text></view>
+    <view class="ai-row"><text>匹配流程</text><text>{{flowMatch.flow_name}}</text></view>
+    <view class="flow-steps" wx:if="{{flowMatch.steps}}">
+      <view class="flow-step" wx:for="{{flowMatch.steps}}" wx:key="step">
+        {{item.step}}. {{item.name}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 三重一大预警 -->
+  <view class="card" wx:if="{{majorCheck && majorCheck.is_major_decision}}">
+    <view class="card-title text-danger">⚖️ 三重一大决策预警 <text class="soe-badge">SOE</text></view>
+    <view class="ai-warning">
+      <text class="text-danger">触发条件：{{majorCheck.triggers}}</text>
+      <view class="text-muted" style="margin-top:8rpx;font-size:22rpx;">需先完成党委会前置研究+董事会集体决策</view>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">提交入库</button>
+  </view>
+  <view class="safe-bottom"></view>
+</view>

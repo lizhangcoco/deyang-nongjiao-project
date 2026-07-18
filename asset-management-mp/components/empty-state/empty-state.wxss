@@ -1,0 +1,12 @@
+.empty {
+  text-align: center;
+  padding: 100rpx 0;
+}
+.empty .icon {
+  font-size: 100rpx;
+  margin-bottom: 20rpx;
+}
+.empty .text {
+  color: #95a5a6;
+  font-size: 28rpx;
+}

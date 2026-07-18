@@ -1,0 +1,22 @@
+<view class="receive-page" wx:if="{{asset}}">
+  <view class="page-header">
+    <view class="title">资产领用申请</view>
+    <view class="sub">59号制度M2 · 高价值三级审签</view>
+  </view>
+  <view class="card">
+    <view class="card-title">领用资产</view>
+    <view class="info-row"><text>资产编号</text><text>{{asset.asset_code}}</text></view>
+    <view class="info-row"><text>资产名称</text><text>{{asset.asset_name}}</text></view>
+    <view class="info-row"><text>原值</text><text class="text-primary">¥{{asset.original_value}}</text></view>
+    <view class="info-row"><text>高价值</text><text class="{{isHighValue ? 'text-warning' : 'text-success'}}">{{isHighValue ? '是(三级审签)' : '否'}}</text></view>
+  </view>
+  <view class="card" wx:if="{{flowMatch}}">
+    <view class="card-title">🤖 AI审批流匹配 <text class="soe-badge">AI-2</text></view>
+    <view class="flow-steps">
+      <view class="flow-step" wx:for="{{flowMatch.steps}}" wx:key="step">{{item.step}}. {{item.name}}</view>
+    </view>
+  </view>
+  <view class="actions">
+    <button class="btn btn-primary btn-block" bindtap="onSubmit">提交领用申请</button>
+  </view>
+</view>

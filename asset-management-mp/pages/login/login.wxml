@@ -1,0 +1,35 @@
+<view class="login-page">
+  <view class="header">
+    <view class="logo">🏛️</view>
+    <view class="title">成都农交所</view>
+    <view class="subtitle">资产管理小程序</view>
+    <view class="soe-tag">SOE国资监管合规版</view>
+    <view class="version">v1.0.0 · 成农交【2026】59号</view>
+  </view>
+
+  <view class="form card">
+    <view class="form-group">
+      <text class="form-label">手机号</text>
+      <input class="form-input" type="number" maxlength="11" placeholder="请输入手机号" value="{{phone}}" bindinput="onPhoneInput" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">密码</text>
+      <input class="form-input" type="password" placeholder="请输入密码" value="{{password}}" bindinput="onPasswordInput" />
+    </view>
+    <button class="btn btn-primary btn-block" bindtap="onLogin" style="margin-top: 30rpx;">登录</button>
+  </view>
+
+  <view class="quick-section">
+    <view class="section-title">快速切换测试账号(密码123456)</view>
+    <view class="quick-list">
+      <view class="quick-item" wx:for="{{quickAccounts}}" wx:key="id" data-id="{{item.id}}" bindtap="onQuickLogin">
+        <view class="quick-name">{{item.name}}</view>
+        <view class="quick-role">{{item.phone}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view>2026年7月17日生效 · 旧版〔2022〕92号废止</view>
+  </view>
+</view>

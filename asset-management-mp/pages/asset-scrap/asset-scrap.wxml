@@ -1,0 +1,74 @@
+<view class="scrap-page" wx:if="{{asset}}">
+  <view class="page-header">
+    <view class="title">资产报废申请</view>
+    <view class="sub">59号制度M7 · SOE评估+三重一大+处置小组</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">报废资产</view>
+    <view class="info-row"><text>资产编号</text><text>{{asset.asset_code}}</text></view>
+    <view class="info-row"><text>资产名称</text><text>{{asset.asset_name}}</text></view>
+    <view class="info-row"><text>原值</text><text class="text-primary">¥{{asset.original_value}}</text></view>
+    <view class="info-row"><text>账面价值</text><text class="text-warning">¥{{asset.book_value}}</text></view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">报废信息</view>
+    <view class="form-group">
+      <text class="form-label">报废类型</text>
+      <picker mode="selector" range="{{scrapTypeOptions}}" range-key="label" bindchange="onScrapTypeChange">
+        <view>{{scrapTypeOptions[scrapTypeIndex].label}}</view>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="form-label">报废事由</text>
+      <textarea class="form-textarea" placeholder="请详细说明报废原因" data-field="scrap_reason" value="{{form.scrap_reason}}" bindinput="onInput" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">大型设备</text>
+      <switch checked="{{form.is_large_equipment}}" data-field="is_large_equipment" bindchange="onSwitchChange" color="#c0392b" />
+    </view>
+    <view class="form-group" wx:if="{{form.is_large_equipment}}">
+      <text class="form-label">鉴定报告</text>
+      <view class="upload-btn">+ 上传第三方鉴定报告</view>
+    </view>
+    <view class="form-group">
+      <text class="form-label">国家专项</text>
+      <switch checked="{{form.has_special_regulation}}" data-field="has_special_regulation" bindchange="onSwitchChange" color="#c0392b" />
+    </view>
+    <view class="form-group" wx:if="{{form.has_special_regulation}}">
+      <text class="form-label">合规证明</text>
+      <view class="upload-btn">+ 上传合规处置证明</view>
+    </view>
+    <view class="form-group">
+      <text class="form-label">对外转让</text>
+      <switch checked="{{form.is_transfer_out}}" data-field="is_transfer_out" bindchange="onSwitchChange" color="#c0392b" />
+    </view>
+  </view>
+
+  <!-- SOE评估预警 -->
+  <view class="card soe-card-warning" wx:if="{{appraisalRequired}}">
+    <view class="card-title text-danger">💯 SOE强制评估</view>
+    <view class="text-danger">账面净值≥10万或无账面价值，处置前必须委托评估机构出具评估报告，并报国资委备案</view>
+  </view>
+
+  <!-- 三重一大预警 -->
+  <view class="card soe-card-warning" wx:if="{{majorCheck.is_major_decision}}">
+    <view class="card-title text-danger">⚖️ 三重一大决策</view>
+    <view class="text-danger">触发：{{majorCheck.triggers}}</view>
+    <view class="text-muted" style="font-size:22rpx;margin-top:8rpx;">需先完成党委会前置研究+董事会集体决策+录音录像归档</view>
+  </view>
+
+  <!-- 报废处置全流程 -->
+  <view class="card" wx:if="{{flowMatch}}">
+    <view class="card-title">报废处置全流程</view>
+    <view class="flow-steps">
+      <view class="flow-step" wx:for="{{flowMatch.steps}}" wx:key="step">{{item.step}}. {{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-danger btn-block" bindtap="onSubmit">提交报废申请</button>
+  </view>
+  <view class="safe-bottom"></view>
+</view>

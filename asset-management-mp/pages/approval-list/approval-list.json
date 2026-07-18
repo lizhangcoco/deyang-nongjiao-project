@@ -1,0 +1,4 @@
+{
+  "navigationBarTitleText": "审批中心",
+  "usingComponents": { "empty-state": "/components/empty-state/empty-state" }
+}
